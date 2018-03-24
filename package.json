@@ -6,16 +6,20 @@
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
     "@oclif/command": "^1.4.5",
-    "@oclif/config": "^1.3.60"
+    "@oclif/config": "^1.3.60",
+    "fs-extra": "^5.0.0",
+    "http-call": "^5.0.2",
+    "semver": "^5.5.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.4.2",
-    "@oclif/plugin-help": "^1.2.1",
     "@oclif/test": "^1.0.1",
     "@oclif/tslint": "^1.0.2",
     "@types/chai": "^4.1.2",
+    "@types/fs-extra": "^5.0.1",
     "@types/mocha": "^5.0.0",
     "@types/node": "^9.6.0",
+    "@types/semver": "^5.5.0",
     "chai": "^4.1.2",
     "globby": "^8.0.1",
     "mocha": "^5.0.5",
@@ -37,13 +41,11 @@
   ],
   "license": "MIT",
   "oclif": {
-    "commands": "./lib/commands",
     "bin": "oclif-example",
-    "devPlugins": [
-      "@oclif/plugin-help"
-    ],
     "hooks": {
-      "init": "./lib/hooks/init/check_version"
+      "init": [
+        "./lib/hooks/init/check_update"
+      ]
     }
   },
   "repository": "oclif/plugin-warn-if-update-available",

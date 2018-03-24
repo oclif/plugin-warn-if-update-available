@@ -73,7 +73,7 @@
   dependencies:
     "@heroku/linewrap" "^1.0.0"
 
-"@oclif/plugin-help@^1.1.6", "@oclif/plugin-help@^1.2.1":
+"@oclif/plugin-help@^1.1.6":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@oclif/plugin-help/-/plugin-help-1.2.1.tgz#5537779e5a1cfb812d54333111c861d06771c18f"
   dependencies:
@@ -101,13 +101,23 @@
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.1.2.tgz#f1af664769cfb50af805431c407425ed619daa21"
 
+"@types/fs-extra@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.1.tgz#cd856fbbdd6af2c11f26f8928fd8644c9e9616c9"
+  dependencies:
+    "@types/node" "*"
+
 "@types/mocha@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.0.0.tgz#a3014921991066193f6c8e47290d4d598dfd19e6"
 
-"@types/node@^9.6.0":
+"@types/node@*", "@types/node@^9.6.0":
   version "9.6.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.0.tgz#d3480ee666df9784b1001a1872a2f6ccefb6c2d7"
+
+"@types/semver@^5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@types/semver/-/semver-5.5.0.tgz#146c2a29ee7d3bae4bf2fcb274636e264c813c45"
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -327,6 +337,10 @@ component-emitter@^1.2.1:
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+
+content-type@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
 
 copy-descriptor@^0.1.0:
   version "0.1.1"
@@ -596,6 +610,17 @@ hosted-git-info@^2.1.4:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.0.tgz#23235b29ab230c576aab0d4f13fc046b0b038222"
 
+http-call@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/http-call/-/http-call-5.0.2.tgz#21bec3655f1631de128c0cdaa470777b1fbbc365"
+  dependencies:
+    content-type "^1.0.4"
+    debug "^3.1.0"
+    is-retry-allowed "^1.1.0"
+    is-stream "^1.1.0"
+    tslib "^1.8.1"
+    tunnel-agent "^0.6.0"
+
 ignore@^3.3.5:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
@@ -720,6 +745,14 @@ is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
   dependencies:
     isobject "^3.0.1"
+
+is-retry-allowed@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-retry-allowed/-/is-retry-allowed-1.1.0.tgz#11a060568b67339444033d0125a61a20d564fb34"
+
+is-stream@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
 is-windows@^1.0.2:
   version "1.0.2"
@@ -1012,6 +1045,10 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
+safe-buffer@^5.0.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
+
 safe-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/safe-regex/-/safe-regex-1.1.0.tgz#40a3669f3b077d1e943d44629e157dd48023bf2e"
@@ -1274,6 +1311,12 @@ tsutils@^2.12.1, tsutils@^2.22.2:
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.22.2.tgz#0b9f3d87aa3eb95bd32d26ce2b88aa329a657951"
   dependencies:
     tslib "^1.8.1"
+
+tunnel-agent@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.6.0.tgz#27a5dea06b36b04a0a9966774b290868f0fc40fd"
+  dependencies:
+    safe-buffer "^5.0.1"
 
 type-detect@^4.0.0:
   version "4.0.8"
