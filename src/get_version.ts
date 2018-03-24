@@ -3,7 +3,7 @@ import HTTP from 'http-call'
 
 async function touch(file: string) {
   if (!await fs.pathExists(file)) {
-    await fs.writeJSON(file, {})
+    await fs.outputJSON(file, {})
   } else {
     await fs.utimes(file, new Date(), new Date())
   }
