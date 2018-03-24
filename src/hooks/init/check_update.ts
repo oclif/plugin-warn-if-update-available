@@ -21,9 +21,14 @@ const hook: Hook<'init'> = async function ({config}) {
   }
 
   const refreshNeeded = async () => {
-    const {mtime} = await fs.stat(file)
-    const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24)
-    return staleAt < new Date()
+    try {
+      const {mtime} = await fs.stat(file)
+      const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24)
+      return staleAt < new Date()
+    } catch (err) {
+      debug(err)
+      return true
+    }
   }
 
   const spawnRefresh = async () => {
