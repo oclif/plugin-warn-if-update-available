@@ -11,8 +11,8 @@ warns if there is a newer version of CLI released
 [![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/jdxcode/plugin-warn-if-update-available/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+* [What is this?](#what-is-this)
+* [Installation](#installation)
 <!-- tocstop -->
 
 # What is this?
