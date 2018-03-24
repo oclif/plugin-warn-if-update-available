@@ -21,6 +21,8 @@ warns if there is a newer version of CLI released
 
 This plugin shows a warning message if a user is running an out of date CLI.
 
+![screenshot](./assets/screenshot.png)
+
 # Installation
 
 Add the plugin to your project with `yarn add @oclif/plugin-warn-if-update-available`, then add it to the `package.json` of the oclif CLI:
