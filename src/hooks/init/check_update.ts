@@ -13,7 +13,7 @@ const hook: Hook<'init'> = async function ({config}) {
     try {
       const distTags = await fs.readJSON(file)
       if (distTags && distTags.latest && semver.gt(distTags.latest, config.version)) {
-        this.warn(`Update available to ${distTags.latest} from ${config.version}`)
+        this.warn(`${config.name} update available to ${distTags.latest} from ${config.version}`)
       }
     } catch (err) {
       if (err.code !== 'ENOENT') throw err
