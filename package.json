@@ -8,6 +8,7 @@
     "@oclif/command": "^1.4.5",
     "@oclif/config": "^1.3.60",
     "@oclif/errors": "^1.0.3",
+    "chalk": "^2.3.2",
     "debug": "^3.1.0",
     "fs-extra": "^5.0.0",
     "http-call": "^5.1.0",
