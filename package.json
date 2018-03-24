@@ -41,7 +41,10 @@
     "bin": "oclif-example",
     "devPlugins": [
       "@oclif/plugin-help"
-    ]
+    ],
+    "hooks": {
+      "init": "./lib/hooks/init/check_version"
+    }
   },
   "repository": "oclif/plugin-warn-if-update-available",
   "scripts": {
