@@ -14,40 +14,22 @@ warns if there is a newer version of CLI released
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
-# Usage
-<!-- usage -->
-```sh-session
-$ npm install -g @oclif/plugin-warn-if-update-available
-$ oclif-example COMMAND
-running command...
-$ oclif-example (-v|--version|version)
-@oclif/plugin-warn-if-update-available/0.0.0 darwin-x64 node-v9.9.0
-$ oclif-example --help [COMMAND]
-USAGE
-  $ oclif-example COMMAND
-...
+
+# What is this?
+
+This plugin shows a warning message if a user is running an out of date CLI.
+
+# Installation
+
+Add the plugin to your project with `yarn add @oclif/plugin-warn-if-update-available`, then add it to the `package.json` of the oclif CLI:
+
+```js
+{
+  "name": "mycli",
+  "version": "0.0.0",
+  // ...
+  "oclif": {
+    "plugins": ["@oclif/plugin-help", "@oclif/plugin-warn-if-update-available"]
+  }
+}
 ```
-<!-- usagestop -->
-# Commands
-<!-- commands -->
-* [oclif-example hello [FILE]](#oclif-example-hello-file)
-
-## oclif-example hello [FILE]
-
-describe the command here
-
-```
-USAGE
-  $ oclif-example hello [FILE]
-
-OPTIONS
-  -f, --force
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ oclif-example hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/oclif/plugin-warn-if-update-available/blob/v0.0.0/src/commands/hello.ts)_
-<!-- commandsstop -->
