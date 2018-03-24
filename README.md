@@ -1,6 +1,8 @@
 @oclif/plugin-warn-if-update-available
 ======================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/oclif/plugin-warn-if-update-available.svg)](https://greenkeeper.io/)
+
 warns if there is a newer version of CLI released
 
 [![Version](https://img.shields.io/npm/v/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
