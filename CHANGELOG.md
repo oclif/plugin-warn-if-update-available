@@ -1,3 +1,12 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.2.0...v1.2.1) (2018-03-24)
+
+
+### Bug Fixes
+
+* create directory if it does not exist ([1de44da](https://github.com/oclif/plugin-warn-if-update-available/commit/1de44da))
+* testing release ([1345627](https://github.com/oclif/plugin-warn-if-update-available/commit/1345627))
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.1.0...v1.2.0) (2018-03-24)
 
