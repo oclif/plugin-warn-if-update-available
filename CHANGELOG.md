@@ -1,3 +1,16 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.1.0...v1.2.0) (2018-03-24)
+
+
+### Bug Fixes
+
+* add chalk explicitly ([757e0b7](https://github.com/oclif/plugin-warn-if-update-available/commit/757e0b7))
+
+
+### Features
+
+* add some color ([097ee6e](https://github.com/oclif/plugin-warn-if-update-available/commit/097ee6e))
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.0.2...v1.1.0) (2018-03-24)
 
