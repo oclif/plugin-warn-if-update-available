@@ -4,26 +4,42 @@ import * as fs from 'fs-extra'
 import * as path from 'path'
 import * as semver from 'semver'
 
+const debug = require('debug')('update-check')
+
 const hook: Hook<'init'> = async function ({config}) {
   const file = path.join(config.cacheDir, 'version')
-  try {
-    const distTags = await fs.readJSON(file)
-    if (semver.gt(distTags.latest, config.version)) {
-      this.warn(`Update available to ${distTags.latest} from ${config.version}`)
+
+  const checkVersion = async () => {
+    try {
+      const distTags = await fs.readJSON(file)
+      if (distTags && distTags.latest && semver.gt(distTags.latest, config.version)) {
+        this.warn(`Update available to ${distTags.latest} from ${config.version}`)
+      }
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err
     }
-  } catch (err) {
-    if (err.code !== 'ENOENT') throw err
   }
 
-  spawn(
-    process.execPath,
-    [path.join(__dirname, '../../../lib/get_version'), config.name, file],
-    {
-      // detached: !config.windows,
-      // stdio: 'ignore',
-      stdio: 'inherit',
-    }
-  ).unref()
+  const refreshNeeded = async () => {
+    const {mtime} = await fs.stat(file)
+    const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24)
+    return staleAt < new Date()
+  }
+
+  const spawnRefresh = async () => {
+    debug('spawning version refresh')
+    spawn(
+      process.execPath,
+      [path.join(__dirname, '../../../lib/get_version'), config.name, file],
+      {
+        detached: !config.windows,
+        stdio: 'ignore',
+      }
+    ).unref()
+  }
+
+  await checkVersion()
+  if (await refreshNeeded()) await spawnRefresh()
 }
 
 export default hook
