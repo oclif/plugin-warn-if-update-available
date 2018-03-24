@@ -1,3 +1,11 @@
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.2.1...v1.2.2) (2018-03-24)
+
+
+### Bug Fixes
+
+* added screenshot ([da3fb18](https://github.com/oclif/plugin-warn-if-update-available/commit/da3fb18))
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.2.0...v1.2.1) (2018-03-24)
 
