@@ -1,4 +1,5 @@
 import {Hook} from '@oclif/config'
+import Chalk from 'chalk'
 import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
 import * as path from 'path'
@@ -13,7 +14,8 @@ const hook: Hook<'init'> = async function ({config}) {
     try {
       const distTags = await fs.readJSON(file)
       if (distTags && distTags.latest && semver.gt(distTags.latest, config.version)) {
-        this.warn(`${config.name} update available to ${distTags.latest} from ${config.version}`)
+        const chalk: typeof Chalk = require('chalk')
+        this.warn(`${config.name} update available to ${chalk.greenBright(distTags.latest)} from ${chalk.greenBright(config.version)}`)
       }
     } catch (err) {
       if (err.code !== 'ENOENT') throw err
