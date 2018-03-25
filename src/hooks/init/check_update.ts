@@ -15,7 +15,7 @@ const hook: Hook<'init'> = async function ({config}) {
       const distTags = await fs.readJSON(file)
       if (distTags && distTags.latest && semver.gt(distTags.latest, config.version)) {
         const chalk: typeof Chalk = require('chalk')
-        this.warn(`${config.name} update available to ${chalk.greenBright(distTags.latest)} from ${chalk.greenBright(config.version)}`)
+        this.warn(`${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}`)
       }
     } catch (err) {
       if (err.code !== 'ENOENT') throw err
