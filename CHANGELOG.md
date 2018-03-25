@@ -1,3 +1,11 @@
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.2.2...v1.2.3) (2018-03-25)
+
+
+### Bug Fixes
+
+* switch from/to output ([c6655a4](https://github.com/oclif/plugin-warn-if-update-available/commit/c6655a4))
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.2.1...v1.2.2) (2018-03-24)
 
