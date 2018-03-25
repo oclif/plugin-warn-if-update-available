@@ -20,9 +20,11 @@ warns if there is a newer version of CLI released
 
 This plugin shows a warning message if a user is running an out of date CLI.
 
-This checks the version against the npm registry asynchronously in a forked process, at most once per 24 hours. It then saves a version file to the cache directory that will enable the warning. The upside of this method is that it won't block a user while they're using your CLI—the downside is that it will only display _after_ running a command that fetches the new version.
-
 ![screenshot](./assets/screenshot.png)
+
+# How it works
+
+This checks the version against the npm registry asynchronously in a forked process, at most once per 24 hours. It then saves a version file to the cache directory that will enable the warning. The upside of this method is that it won't block a user while they're using your CLI—the downside is that it will only display _after_ running a command that fetches the new version.
 
 # Installation
 
