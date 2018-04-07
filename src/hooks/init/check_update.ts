@@ -13,7 +13,7 @@ const hook: Hook<'init'> = async function ({config}) {
   const checkVersion = async () => {
     try {
       const distTags = await fs.readJSON(file)
-      if (distTags && distTags.latest && semver.gt(distTags.latest, config.version)) {
+      if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
         const chalk: typeof Chalk = require('chalk')
         this.warn(`${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}`)
       }
