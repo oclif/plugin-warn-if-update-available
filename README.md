@@ -13,6 +13,7 @@ warns if there is a newer version of CLI released
 
 <!-- toc -->
 * [What is this?](#what-is-this)
+* [How it works](#how-it-works)
 * [Installation](#installation)
 <!-- tocstop -->
 
