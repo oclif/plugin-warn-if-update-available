@@ -24,8 +24,10 @@ const hook: Hook<'init'> = async function ({config}) {
 
   const refreshNeeded = async () => {
     try {
+      const cfg = (config.pjson.oclif as any)['warn-if-update-available'] || {}
+      const timeoutInDays = cfg.timeoutInDays || 7
       const {mtime} = await fs.stat(file)
-      const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24)
+      const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays)
       return staleAt < new Date()
     } catch (err) {
       debug(err)
