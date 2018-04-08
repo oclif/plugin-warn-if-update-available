@@ -5,9 +5,9 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
-    "@oclif/command": "^1.4.5",
-    "@oclif/config": "^1.3.60",
-    "@oclif/errors": "^1.0.3",
+    "@oclif/command": "^1.4.7",
+    "@oclif/config": "^1.4.0",
+    "@oclif/errors": "^1.0.4",
     "chalk": "^2.3.2",
     "debug": "^3.1.0",
     "fs-extra": "^5.0.0",
@@ -15,13 +15,13 @@
     "semver": "^5.5.0"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1.4.2",
-    "@oclif/test": "^1.0.1",
-    "@oclif/tslint": "^1.0.2",
+    "@oclif/dev-cli": "^1.8.0",
+    "@oclif/test": "^1.0.4",
+    "@oclif/tslint": "^1.1.0",
     "@types/chai": "^4.1.2",
     "@types/fs-extra": "^5.0.1",
     "@types/mocha": "^5.0.0",
-    "@types/node": "^9.6.0",
+    "@types/node": "^9.6.2",
     "@types/semver": "^5.5.0",
     "chai": "^4.1.2",
     "globby": "^8.0.1",
@@ -29,7 +29,7 @@
     "ts-node": "5",
     "tslib": "^1.9.0",
     "tslint": "^5.9.1",
-    "typescript": "^2.7.2"
+    "typescript": "^2.8.1"
   },
   "engines": {
     "node": ">=8.0.0"
