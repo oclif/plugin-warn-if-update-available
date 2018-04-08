@@ -1,3 +1,11 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.2.5...v1.3.0) (2018-04-08)
+
+
+### Features
+
+* increase timeout to weekly and add timeoutInDays configuration ([7c1bdbf](https://github.com/oclif/plugin-warn-if-update-available/commit/7c1bdbf))
+
 <a name="1.2.5"></a>
 ## [1.2.5](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.2.4...v1.2.5) (2018-04-08)
 

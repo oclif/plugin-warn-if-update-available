@@ -15,6 +15,7 @@ warns if there is a newer version of CLI released
 * [What is this?](#what-is-this)
 * [How it works](#how-it-works)
 * [Installation](#installation)
+* [Configuration](#configuration)
 <!-- tocstop -->
 
 # What is this?
