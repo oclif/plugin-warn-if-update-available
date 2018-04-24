@@ -1,3 +1,11 @@
+<a name="1.3.5"></a>
+## [1.3.5](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.3.4...v1.3.5) (2018-04-24)
+
+
+### Bug Fixes
+
+* prevent multiple updates ([cc872ea](https://github.com/oclif/plugin-warn-if-update-available/commit/cc872ea))
+
 <a name="1.3.4"></a>
 ## [1.3.4](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.3.3...v1.3.4) (2018-04-24)
 
