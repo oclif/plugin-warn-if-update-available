@@ -15,7 +15,7 @@
     "semver": "^5.5.0"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1.13.6",
+    "@oclif/dev-cli": "^1.13.7",
     "@oclif/test": "^1.0.5",
     "@oclif/tslint": "^1.1.0",
     "@types/chai": "^4.1.3",
