@@ -32,9 +32,7 @@ const hook: Hook<'init'> = async function ({config}) {
       const timeoutInDays = cfg.timeoutInDays || 60
       const {mtime} = await fs.stat(file)
       const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays)
-      if (staleAt < new Date()) return true
-      const versions = await fs.readJSON(file)
-      return !versions.current || versions.current !== config.version
+      return staleAt < new Date()
     } catch (err) {
       debug(err)
       return true
