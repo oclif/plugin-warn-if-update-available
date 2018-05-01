@@ -10,7 +10,7 @@
     "@oclif/errors": "^1.0.6",
     "chalk": "^2.4.0",
     "debug": "^3.1.0",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^6.0.0",
     "http-call": "^5.1.1",
     "semver": "^5.5.0"
   },
