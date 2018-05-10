@@ -1,3 +1,11 @@
+<a name="1.3.9"></a>
+## [1.3.9](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.3.8...v1.3.9) (2018-05-10)
+
+
+### Bug Fixes
+
+* updated deps ([a35f789](https://github.com/oclif/plugin-warn-if-update-available/commit/a35f789))
+
 <a name="1.3.8"></a>
 ## [1.3.8](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.3.7...v1.3.8) (2018-05-03)
 
