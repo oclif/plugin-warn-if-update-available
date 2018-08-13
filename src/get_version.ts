@@ -1,10 +1,12 @@
 import * as fs from 'fs-extra'
-import HTTP from 'http-call'
+import {promisify} from 'util'
+const exec = promisify(require('child_process').exec)
 
 async function run(name: string, file: string, version: string) {
   await fs.outputJSON(file, {current: version}) // touch file with current version to prevent multiple updates
-  const {body} = await HTTP.get(`https://registry.npmjs.org/${name.replace('/', '%2f')}`, {timeout: 5000})
-  await fs.outputJSON(file, {...body['dist-tags'], current: version})
+  const {stdout} = await exec(`npm view ${name} dist-tags --json`)
+  const distTags = JSON.parse(stdout)
+  await fs.outputJSON(file, {...distTags, current: version})
   process.exit(0)
 }
 
