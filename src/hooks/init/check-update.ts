@@ -43,7 +43,7 @@ const hook: Hook<'init'> = async function ({config}) {
     debug('spawning version refresh')
     spawn(
       process.execPath,
-      [path.join(__dirname, '../../../lib/get_version'), config.name, file, config.version],
+      [path.join(__dirname, '../../../lib/get-version'), config.name, file, config.version],
       {
         detached: !config.windows,
         stdio: 'ignore',
