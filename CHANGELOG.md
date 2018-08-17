@@ -1,3 +1,11 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.3.9...v1.4.0) (2018-08-17)
+
+
+### Features
+
+* typescript 3 ([6b8b9b3](https://github.com/oclif/plugin-warn-if-update-available/commit/6b8b9b3))
+
 <a name="1.3.9"></a>
 ## [1.3.9](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.3.8...v1.3.9) (2018-05-10)
 
