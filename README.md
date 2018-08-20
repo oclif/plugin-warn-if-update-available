@@ -45,4 +45,26 @@ Add the plugin to your project with `yarn add @oclif/plugin-warn-if-update-avail
 
 # Configuration
 
-In `package.json`, set `oclif['warn-if-update-available'].timeoutInDays` to change the timeout duration between checks.
+In `package.json`, set `oclif['warn-if-update-available']` to an object with
+any of the following configuration properties:
+
+- `timeoutInDays` - Duration between update checks. Defaults to 60.
+- `registry` - URL of registry. Defaults to the public npm registry: `https://registry.npmjs.org`
+- `authorization` - Authorization header value for registries that require auth.
+
+## Example configuration
+
+```json
+{
+  "oclif": {
+    "plugins": [
+      "@oclif/plugin-warn-if-update-available"
+    ],
+    "warn-if-update-available": {
+      "timeoutInDays": 7,
+      "registry": "https://my.example.com/module/registry",
+      "authorization": "Basic <SOME READ ONLY AUTH TOKEN>"
+    }
+  }
+}
+``` 
