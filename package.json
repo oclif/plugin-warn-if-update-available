@@ -35,7 +35,7 @@
     "node": ">=8.0.0"
   },
   "files": [
-    ".oclif.manifest.json",
+    "oclif.manifest.json",
     "/lib"
   ],
   "homepage": "https://github.com/oclif/plugin-warn-if-update-available",
@@ -54,7 +54,7 @@
   "repository": "oclif/plugin-warn-if-update-available",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "clean": "rm -f .oclif.manifest.json",
+    "clean": "rm -f oclif.manifest.json",
     "lint": "tsc -p test --noEmit && tslint -p test -t stylish",
     "postpublish": "yarn run clean",
     "posttest": "yarn run lint",
