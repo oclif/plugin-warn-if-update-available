@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.4.0...v1.5.0) (2018-08-21)
+
+
+### Features
+
+* support private registries ([#12](https://github.com/oclif/plugin-warn-if-update-available/issues/12)) ([aed5b4e](https://github.com/oclif/plugin-warn-if-update-available/commit/aed5b4e))
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.3.9...v1.4.0) (2018-08-17)
 

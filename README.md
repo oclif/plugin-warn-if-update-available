@@ -67,4 +67,4 @@ any of the following configuration properties:
     }
   }
 }
-``` 
+```
