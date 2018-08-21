@@ -10,6 +10,13 @@ const debug = require('debug')('update-check')
 const hook: Hook<'init'> = async function ({config}) {
   const file = path.join(config.cacheDir, 'version')
 
+  // Destructure package.json configuration with defaults
+  const {
+    timeoutInDays = 60,
+    registry = 'https://registry.npmjs.org',
+    authorization = '',
+  } = (config.pjson.oclif as any)['warn-if-update-available'] || {}
+
   const checkVersion = async () => {
     try {
       const distTags = await fs.readJSON(file)
@@ -28,8 +35,6 @@ const hook: Hook<'init'> = async function ({config}) {
 
   const refreshNeeded = async () => {
     try {
-      const cfg = (config.pjson.oclif as any)['warn-if-update-available'] || {}
-      const timeoutInDays = cfg.timeoutInDays || 60
       const {mtime} = await fs.stat(file)
       const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays)
       return staleAt < new Date()
@@ -43,7 +48,7 @@ const hook: Hook<'init'> = async function ({config}) {
     debug('spawning version refresh')
     spawn(
       process.execPath,
-      [path.join(__dirname, '../../../lib/get-version'), config.name, file, config.version],
+      [path.join(__dirname, '../../../lib/get-version'), config.name, file, config.version, registry, authorization],
       {
         detached: !config.windows,
         stdio: 'ignore',
