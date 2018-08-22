@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.0...v1.5.1) (2018-08-22)
+
+
+### Bug Fixes
+
+* rename oclif manifest to not be a dotfile ([84f870f](https://github.com/oclif/plugin-warn-if-update-available/commit/84f870f))
+
 # [1.5.0](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.4.0...v1.5.0) (2018-08-21)
 
 
