@@ -19,6 +19,8 @@ const hook: Hook<'init'> = async function ({config}) {
 
   const checkVersion = async () => {
     try {
+      // do not show warning if updating
+      if (process.argv[2] === 'update') return
       const distTags = await fs.readJSON(file)
       if (config.version.includes('-')) {
         // TODO: handle channels
