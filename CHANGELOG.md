@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.1...v1.5.2) (2018-08-28)
+
+
+### Bug Fixes
+
+* hide warning if updating ([6be6cd8](https://github.com/oclif/plugin-warn-if-update-available/commit/6be6cd8))
+
 ## [1.5.1](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.0...v1.5.1) (2018-08-22)
 
 
