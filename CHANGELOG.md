@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.2...v1.5.3) (2018-09-14)
+
+
+### Bug Fixes
+
+* remove greenkeeper-lockfile ([e95cd6c](https://github.com/oclif/plugin-warn-if-update-available/commit/e95cd6c))
+
 ## [1.5.2](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.1...v1.5.2) (2018-08-28)
 
 
