@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.3...v1.5.4) (2018-10-13)
+
+
+### Bug Fixes
+
+* remove greenkeeper badge ([f030bc1](https://github.com/oclif/plugin-warn-if-update-available/commit/f030bc1))
+
 ## [1.5.3](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.2...v1.5.3) (2018-09-14)
 
 
