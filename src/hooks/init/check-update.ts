@@ -13,6 +13,7 @@ const hook: Hook<'init'> = async function ({config}) {
   // Destructure package.json configuration with defaults
   const {
     timeoutInDays = 60,
+    message = '',
     registry = 'https://registry.npmjs.org',
     authorization = '',
   } = (config.pjson.oclif as any)['warn-if-update-available'] || {}
@@ -28,7 +29,14 @@ const hook: Hook<'init'> = async function ({config}) {
       }
       if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
         const chalk: typeof Chalk = require('chalk')
-        this.warn(`${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}`)
+        // Default message if the user doesn't provide one
+        const defaultMessage = `${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}`;
+        if (message.length !== 0) {
+          this.warn(defaultMessage)
+        } else {
+          // Append the custom message to a new line
+          this.warn(`${defaultMessage}\n${message}`)
+        }
       }
     } catch (err) {
       if (err.code !== 'ENOENT') throw err
