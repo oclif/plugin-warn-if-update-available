@@ -50,7 +50,7 @@ In `package.json`, set `oclif['warn-if-update-available']` to an object with
 any of the following configuration properties:
 
 - `timeoutInDays` - Duration between update checks. Defaults to 60.
-- `message` - A custome message to display after the update notification.
+- `message` - A custom message to display after the update notification.
 - `registry` - URL of registry. Defaults to the public npm registry: `https://registry.npmjs.org`
 - `authorization` - Authorization header value for registries that require auth.
 
