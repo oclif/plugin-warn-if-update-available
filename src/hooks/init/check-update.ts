@@ -1,8 +1,8 @@
 import {Hook} from '@oclif/config'
 import Chalk from 'chalk'
 import {spawn} from 'child_process'
-import template = require('lodash.template');
 import * as fs from 'fs-extra'
+import template = require('lodash.template')
 import * as path from 'path'
 import * as semver from 'semver'
 
@@ -31,7 +31,7 @@ const hook: Hook<'init'> = async function ({config}) {
       if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
         const chalk: typeof Chalk = require('chalk')
         // Default message if the user doesn't provide one
-        const messageTemplate = template(`${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}. <%= message %>`);
+        const messageTemplate = template(`${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}. <%= message %>`)
         if (message.length !== 0) {
           this.warn(messageTemplate({message: ''}))
         } else {
