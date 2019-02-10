@@ -64,7 +64,7 @@ any of the following configuration properties:
     ],
     "warn-if-update-available": {
       "timeoutInDays": 7,
-      "message": "Run @scope/my-cli update to update to the latest"
+      "message": "Run @scope/my-cli update to update to the latest",
       "registry": "https://my.example.com/module/registry",
       "authorization": "Basic <SOME READ ONLY AUTH TOKEN>"
     }
