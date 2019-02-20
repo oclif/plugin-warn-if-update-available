@@ -140,10 +140,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/lodash.template@4.4.4":
-  version "4.4.4"
-  resolved "https://registry.yarnpkg.com/@types/lodash.template/-/lodash.template-4.4.4.tgz#75fddd12297fb12683f9be42e05c646c359a1ff7"
-  integrity sha512-Z858mvp8gSWCU76Mus6gmqFl5YFhdwhdd/012P07X+MsgJS+cLOAIO+od4At8OYE3BU4KVrAYOadLRzexw15eQ==
+"@types/lodash.template@^4.4.5":
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/@types/lodash.template/-/lodash.template-4.4.5.tgz#40e1df204e40fb820870b0d629bd0b3a8124b02b"
+  integrity sha512-buhJodMUvXNhPCeB/6c80V5OBFUPT7LlZZy05WdV9A5h1E1LfZPso6PCVaHlXz70hB4/DqH5+0bkdNXJRCoYDQ==
   dependencies:
     "@types/lodash" "*"
 

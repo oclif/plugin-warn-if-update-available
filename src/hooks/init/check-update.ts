@@ -2,9 +2,9 @@ import {Hook} from '@oclif/config'
 import Chalk from 'chalk'
 import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
-import template = require('lodash.template')
 import * as path from 'path'
 import * as semver from 'semver'
+import template = require('lodash.template')
 
 const debug = require('debug')('update-check')
 
