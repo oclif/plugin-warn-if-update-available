@@ -2,6 +2,7 @@ import {Hook} from '@oclif/config'
 import Chalk from 'chalk'
 import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
+import Template = require('lodash.template')
 import * as path from 'path'
 import * as semver from 'semver'
 
@@ -13,6 +14,7 @@ const hook: Hook<'init'> = async function ({config}) {
   // Destructure package.json configuration with defaults
   const {
     timeoutInDays = 60,
+    message = '<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.',
     registry = 'https://registry.npmjs.org',
     authorization = '',
   } = (config.pjson.oclif as any)['warn-if-update-available'] || {}
@@ -28,7 +30,13 @@ const hook: Hook<'init'> = async function ({config}) {
       }
       if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
         const chalk: typeof Chalk = require('chalk')
-        this.warn(`${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}`)
+        const template: typeof Template = require('lodash.template')
+        // Default message if the user doesn't provide one
+        this.warn(template(message)({
+          chalk,
+          config,
+          ...distTags,
+        }))
       }
     } catch (err) {
       if (err.code !== 'ENOENT') throw err

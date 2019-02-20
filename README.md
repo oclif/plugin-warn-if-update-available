@@ -11,10 +11,12 @@ warns if there is a newer version of CLI released
 [![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/oclif/plugin-warn-if-update-available/blob/master/package.json)
 
 <!-- toc -->
-* [What is this?](#what-is-this)
-* [How it works](#how-it-works)
-* [Installation](#installation)
-* [Configuration](#configuration)
+- [@oclif/plugin-warn-if-update-available](#oclifplugin-warn-if-update-available)
+- [What is this?](#what-is-this)
+- [How it works](#how-it-works)
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Example configuration](#example-configuration)
 <!-- tocstop -->
 
 # What is this?
@@ -48,6 +50,7 @@ In `package.json`, set `oclif['warn-if-update-available']` to an object with
 any of the following configuration properties:
 
 - `timeoutInDays` - Duration between update checks. Defaults to 60.
+- `message` - Customize update message.
 - `registry` - URL of registry. Defaults to the public npm registry: `https://registry.npmjs.org`
 - `authorization` - Authorization header value for registries that require auth.
 
@@ -61,6 +64,7 @@ any of the following configuration properties:
     ],
     "warn-if-update-available": {
       "timeoutInDays": 7,
+      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
       "registry": "https://my.example.com/module/registry",
       "authorization": "Basic <SOME READ ONLY AUTH TOKEN>"
     }
