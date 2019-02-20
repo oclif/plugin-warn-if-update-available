@@ -50,7 +50,7 @@ In `package.json`, set `oclif['warn-if-update-available']` to an object with
 any of the following configuration properties:
 
 - `timeoutInDays` - Duration between update checks. Defaults to 60.
-- `message` - A custom message to display after the update notification.
+- `message` - Customize update message.
 - `registry` - URL of registry. Defaults to the public npm registry: `https://registry.npmjs.org`
 - `authorization` - Authorization header value for registries that require auth.
 
@@ -64,7 +64,7 @@ any of the following configuration properties:
     ],
     "warn-if-update-available": {
       "timeoutInDays": 7,
-      "message": "Run @scope/my-cli update to update to the latest",
+      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
       "registry": "https://my.example.com/module/registry",
       "authorization": "Basic <SOME READ ONLY AUTH TOKEN>"
     }

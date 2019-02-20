@@ -14,7 +14,7 @@ const hook: Hook<'init'> = async function ({config}) {
   // Destructure package.json configuration with defaults
   const {
     timeoutInDays = 60,
-    message = '',
+    message = '<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.',
     registry = 'https://registry.npmjs.org',
     authorization = '',
   } = (config.pjson.oclif as any)['warn-if-update-available'] || {}
@@ -32,13 +32,11 @@ const hook: Hook<'init'> = async function ({config}) {
         const chalk: typeof Chalk = require('chalk')
         const template: typeof Template = require('lodash.template')
         // Default message if the user doesn't provide one
-        const messageTemplate = template(`${config.name} update available from ${chalk.greenBright(config.version)} to ${chalk.greenBright(distTags.latest)}. <%= message %>`)
-        if (message.length !== 0) {
-          this.warn(messageTemplate({message: ''}))
-        } else {
-          // Append the custom message to a new line
-          this.warn(messageTemplate({message}))
-        }
+        this.warn(template(message)({
+          chalk,
+          config,
+          ...distTags,
+        }))
       }
     } catch (err) {
       if (err.code !== 'ENOENT') throw err
