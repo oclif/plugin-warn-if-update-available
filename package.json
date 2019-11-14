@@ -18,7 +18,6 @@
   "devDependencies": {
     "@oclif/dev-cli": "^1.19.1",
     "@oclif/test": "^1.2.4",
-    "@oclif/tslint": "^3.1.0",
     "@types/chai": "^4.1.6",
     "@types/fs-extra": "^5.0.5",
     "@types/lodash.template": "^4.4.5",
@@ -26,11 +25,13 @@
     "@types/node": "^11.9.4",
     "@types/semver": "^5.5.0",
     "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
     "globby": "^9.0.0",
     "mocha": "^6.0.0",
     "ts-node": "^8.0.2",
     "tslib": "^1.9.3",
-    "tslint": "^5.11.0",
     "typescript": "^3.3.3"
   },
   "engines": {
@@ -57,12 +58,13 @@
   "scripts": {
     "build": "rm -rf lib && tsc",
     "clean": "rm -f oclif.manifest.json",
-    "lint": "tsc -p test --noEmit && tslint -p test -t stylish",
-    "postpublish": "yarn run clean",
-    "posttest": "yarn run lint",
-    "prepublishOnly": "yarn run build && oclif-dev manifest && oclif-dev readme",
-    "preversion": "yarn run clean",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "pretest": "tsc -p test --noEmit",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "posttest": "yarn lint",
+    "prepublishOnly": "yarn run build && oclif-dev manifest && oclif-dev readme",
+    "postpublish": "yarn run clean",
+    "preversion": "yarn run clean",
     "version": "oclif-dev readme && git add README.md"
   }
 }
