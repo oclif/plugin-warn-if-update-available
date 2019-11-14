@@ -62,7 +62,7 @@ const hook: Hook<'init'> = async function ({config}) {
       {
         detached: !config.windows,
         stdio: 'ignore',
-      }
+      },
     ).unref()
   }
 

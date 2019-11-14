@@ -4,7 +4,7 @@ import HTTP from 'http-call'
 async function run(name: string, file: string, version: string, registry: string, authorization: string) {
   const url = [
     registry.replace(/\/+$/, ''), // remove trailing slash
-    name.replace('/', '%2f')      // scoped packages need escaped separator
+    name.replace('/', '%2f'),      // scoped packages need escaped separator
   ].join('/')
   const headers = authorization ? {authorization} : {}
 
@@ -15,4 +15,4 @@ async function run(name: string, file: string, version: string, registry: string
 }
 
 run(process.argv[2], process.argv[3], process.argv[4], process.argv[5], process.argv[6])
-  .catch(require('@oclif/errors/handle'))
+.catch(require('@oclif/errors/handle'))
