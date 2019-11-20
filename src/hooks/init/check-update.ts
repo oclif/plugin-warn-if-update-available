@@ -38,18 +38,18 @@ const hook: Hook<'init'> = async function ({config}) {
           ...distTags,
         }))
       }
-    } catch (err) {
-      if (err.code !== 'ENOENT') throw err
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error
     }
   }
 
   const refreshNeeded = async () => {
     try {
       const {mtime} = await fs.stat(file)
-      const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays)
+      const staleAt = new Date(mtime.valueOf() + (1000 * 60 * 60 * 24 * timeoutInDays))
       return staleAt < new Date()
-    } catch (err) {
-      debug(err)
+    } catch (error) {
+      debug(error)
       return true
     }
   }
@@ -62,7 +62,7 @@ const hook: Hook<'init'> = async function ({config}) {
       {
         detached: !config.windows,
         stdio: 'ignore',
-      }
+      },
     ).unref()
   }
 
