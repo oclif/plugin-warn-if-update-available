@@ -5,7 +5,7 @@
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
-    "@oclif/command": "^1.5.10",
+    "@oclif/command": "^1.6.0",
     "@oclif/config": "^1.12.8",
     "@oclif/errors": "^1.2.2",
     "chalk": "^2.4.1",
