@@ -165,9 +165,9 @@
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
 
 "@types/lodash.template@^4.4.5":
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/@types/lodash.template/-/lodash.template-4.4.5.tgz#40e1df204e40fb820870b0d629bd0b3a8124b02b"
-  integrity sha512-buhJodMUvXNhPCeB/6c80V5OBFUPT7LlZZy05WdV9A5h1E1LfZPso6PCVaHlXz70hB4/DqH5+0bkdNXJRCoYDQ==
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@types/lodash.template/-/lodash.template-4.5.0.tgz#277654af717ed37ce2687c69f8f221c550276b7a"
+  integrity sha512-4LgHxK16IPbGR7TmXpPvNT7iNGsLCdQY6Rc0mi1a/JECt8et/D4hx6NMVAJej/d932sj1mJsg0QYHKL189O0Qw==
   dependencies:
     "@types/lodash" "*"
 
