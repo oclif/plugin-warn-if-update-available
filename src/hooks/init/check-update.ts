@@ -1,5 +1,5 @@
 import {Hook} from '@oclif/config'
-import Chalk from 'chalk'
+import * as Chalk from 'chalk'
 import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
 import Template = require('lodash.template')
