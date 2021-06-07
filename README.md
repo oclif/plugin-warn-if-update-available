@@ -6,7 +6,6 @@ warns if there is a newer version of CLI released
 [![Version](https://img.shields.io/npm/v/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
 [![CircleCI](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/master.svg?style=shield)](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/master)
 [![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/oclif/plugin-warn-if-update-available?branch=master&svg=true)](https://ci.appveyor.com/project/oclif/plugin-warn-if-update-available/branch/master)
-[![Codecov](https://codecov.io/gh/oclif/plugin-warn-if-update-available/branch/master/graph/badge.svg)](https://codecov.io/gh/oclif/plugin-warn-if-update-available)
 [![Downloads/week](https://img.shields.io/npm/dw/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
 [![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/oclif/plugin-warn-if-update-available/blob/master/package.json)
 
