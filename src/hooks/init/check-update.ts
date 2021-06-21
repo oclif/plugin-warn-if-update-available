@@ -1,8 +1,8 @@
 import { Hook } from "@oclif/config";
 import libnpm, { Manifest } from "libnpm";
-import semver from "semver";
-import fs from "fs-extra";
-import path from "path";
+import * as semver from "semver";
+import * as fs from "fs-extra";
+import * as path from "path";
 import cli from "cli-ux";
 
 const timeoutInDays = 10;
