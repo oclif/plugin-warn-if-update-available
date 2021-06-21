@@ -8,12 +8,8 @@
     "@oclif/command": "^1.6.0",
     "@oclif/config": "^1.12.8",
     "@oclif/errors": "^1.2.2",
-    "chalk": "^4.1.0",
-    "debug": "^4.1.0",
     "fs-extra": "^9.0.1",
-    "http-call": "^5.2.2",
     "libnpm": "^3.0.1",
-    "lodash.template": "^4.4.0",
     "semver": "^7.3.5"
   },
   "devDependencies": {
