@@ -18,7 +18,7 @@ const hook: Hook<"init"> = async function ({ config }) {
         mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays
       );
       return staleAt < new Date();
-    } catch (err) {
+    } catch (error) {
       return true;
     }
   };
@@ -39,6 +39,7 @@ const hook: Hook<"init"> = async function ({ config }) {
       cli.action.stop();
     }
 
+    // eslint-disable-next-line no-use-before-define, @typescript-eslint/no-use-before-define
     await checkVersion(true);
   };
 
@@ -49,7 +50,7 @@ const hook: Hook<"init"> = async function ({ config }) {
           encoding: "utf8",
         })
       );
-    } catch (err) {
+    } catch (error) {
       return null;
     }
   };
