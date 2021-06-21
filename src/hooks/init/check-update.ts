@@ -1,88 +1,81 @@
 import { Hook } from "@oclif/config";
-import * as Chalk from "chalk";
-import { spawn } from "child_process";
-import * as fs from "fs-extra";
-import Template = require("lodash.template");
-import * as path from "path";
-import * as semver from "semver";
+import libnpm, { Manifest } from "libnpm";
+import semver from "semver";
+import fs from "fs-extra";
+import path from "path";
+import cli from "cli-ux";
 
-const debug = require("debug")("update-check");
+const timeoutInDays = 10;
 
 const hook: Hook<"init"> = async function ({ config }) {
-  const file = path.join(config.cacheDir, "version");
-
-  // Destructure package.json configuration with defaults
-  const {
-    timeoutInDays = 60,
-    message = "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
-    registry = "https://registry.npmjs.org",
-    authorization = "",
-  } = (config.pjson.oclif as any)["warn-if-update-available"] || {};
-
-  const checkVersion = async () => {
-    try {
-      // do not show warning if updating
-      if (process.argv[2] === "update") return;
-      const distTags = await fs.readJSON(file);
-      if (config.version.includes("-")) {
-        // TODO: handle channels
-        return;
-      }
-      if (
-        distTags &&
-        distTags.latest &&
-        semver.gt(distTags.latest.split("-")[0], config.version.split("-")[0])
-      ) {
-        const chalk: typeof Chalk = require("chalk");
-        const template: typeof Template = require("lodash.template");
-        // Default message if the user doesn't provide one
-        this.warn(
-          template(message)({
-            chalk,
-            config,
-            ...distTags,
-          })
-        );
-      }
-    } catch (error) {
-      if (error.code !== "ENOENT") throw error;
-    }
-  };
+  const { name: packageName, version: currentVersion } = config;
+  const updateCheckPath = path.join(config.cacheDir, "last-update-check");
 
   const refreshNeeded = async () => {
     try {
-      const { mtime } = await fs.stat(file);
+      const { mtime } = await fs.stat(updateCheckPath);
       const staleAt = new Date(
         mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays
       );
       return staleAt < new Date();
-    } catch (error) {
-      debug(error);
+    } catch (err) {
       return true;
     }
   };
 
-  const spawnRefresh = async () => {
-    debug("spawning version refresh");
-    spawn(
-      process.execPath,
-      [
-        path.join(__dirname, "../../../lib/get-version"),
-        config.name,
-        file,
-        config.version,
-        registry,
-        authorization,
-      ],
-      {
-        detached: !config.windows,
-        stdio: "ignore",
-      }
-    ).unref();
+  const checkForUpdate = async () => {
+    try {
+      cli.action.start("checking for updates");
+
+      const latestManifest: Manifest = await libnpm.manifest(
+        `${packageName}@latest`,
+        libnpm.config.read()
+      );
+
+      await fs.writeFile(updateCheckPath, JSON.stringify(latestManifest), {
+        encoding: "utf8",
+      });
+    } finally {
+      cli.action.stop();
+    }
+
+    await checkVersion(true);
   };
 
-  await checkVersion();
-  if (await refreshNeeded()) await spawnRefresh();
+  const readLatestManifest = async (): Promise<Manifest | null> => {
+    try {
+      return JSON.parse(
+        await fs.readFile(updateCheckPath, {
+          encoding: "utf8",
+        })
+      );
+    } catch (err) {
+      return null;
+    }
+  };
+
+  const checkVersion = async (printStatus?: boolean) => {
+    const latestManifest = await readLatestManifest();
+
+    // No version check has happened, so we can't tell if we're the latest version:
+    if (latestManifest === null) {
+      return null;
+    }
+
+    if (semver.lt(currentVersion, latestManifest.version)) {
+      this.warn(
+        `Update needed, please run \`yarn global add ${packageName}@latest\`\n`
+      );
+    } else if (printStatus) {
+      this.log("All up-to-date!\n");
+    }
+  };
+
+  if (await refreshNeeded()) {
+    await checkForUpdate();
+  } else {
+    await checkVersion();
+  }
 };
 
 export default hook;
