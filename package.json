@@ -12,8 +12,9 @@
     "debug": "^4.1.0",
     "fs-extra": "^9.0.1",
     "http-call": "^5.2.2",
+    "libnpm": "^3.0.1",
     "lodash.template": "^4.4.0",
-    "semver": "^7.3.2"
+    "semver": "^7.3.5"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.19.1",
