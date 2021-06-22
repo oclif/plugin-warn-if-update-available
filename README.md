@@ -46,8 +46,6 @@ any of the following configuration properties:
 
 - `timeoutInDays` - Duration between update checks. Defaults to 60.
 - `message` - Customize update message.
-- `registry` - URL of registry. Defaults to the public npm registry: `https://registry.npmjs.org`
-- `authorization` - Authorization header value for registries that require auth.
 
 ## Example configuration
 
@@ -57,9 +55,7 @@ any of the following configuration properties:
     "plugins": ["@envoy/plugin-warn-if-update-available"],
     "warn-if-update-available": {
       "timeoutInDays": 7,
-      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
-      "registry": "https://my.example.com/module/registry",
-      "authorization": "Basic <SOME READ ONLY AUTH TOKEN>"
+      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>."
     }
   }
 }

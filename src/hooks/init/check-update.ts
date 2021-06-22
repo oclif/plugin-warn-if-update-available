@@ -4,11 +4,16 @@ import * as semver from "semver";
 import * as fs from "fs-extra";
 import * as path from "path";
 import cli from "cli-ux";
-
-const timeoutInDays = 10;
+import * as template from "lodash.template";
+import * as chalk from "chalk";
 
 const hook: Hook<"init"> = async function ({ config }) {
   const { name: packageName, version: currentVersion } = config;
+  // Destructure package.json configuration with defaults
+  const {
+    timeoutInDays = 60,
+    message = "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
+  } = (config.pjson.oclif as any)["warn-if-update-available"] || {};
   const updateCheckPath = path.join(config.cacheDir, "last-update-check");
 
   const refreshNeeded = async () => {
@@ -81,7 +86,11 @@ const hook: Hook<"init"> = async function ({ config }) {
 
     if (semver.lt(currentVersion, latestManifest.version)) {
       this.warn(
-        `Update needed, please run \`yarn global add ${packageName}@latest\`\n`
+        template(message)({
+          chalk,
+          config,
+          latest: latestManifest.version,
+        })
       );
     } else if (printStatus) {
       this.log("All up-to-date!\n");

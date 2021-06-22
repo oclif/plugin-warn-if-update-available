@@ -9,7 +9,8 @@
     "rootDirs": ["./src"],
     "strict": true,
     "target": "es2017",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "esModuleInterop": true
   },
   "include": ["./src/**/*"]
 }
