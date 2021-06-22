@@ -35,6 +35,12 @@ const hook: Hook<"init"> = async function ({ config }) {
       await fs.writeFile(updateCheckPath, JSON.stringify(latestManifest), {
         encoding: "utf8",
       });
+    } catch (error) {
+      // when the host has not yet published any packages, the registry will return a 404.
+      // we swallow this error to avoid erroring out the host cli
+      if (error.code !== "E404") {
+        throw error;
+      }
     } finally {
       cli.action.stop();
     }
