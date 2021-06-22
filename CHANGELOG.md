@@ -1,3 +1,10 @@
+## [1.8.4](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.3...v1.8.4) (2021-06-22)
+
+
+### Bug Fixes
+
+* handle 404 from registry if the host cli hasn't published any packages ([800a546](https://github.com/envoy/plugin-warn-if-update-available/commit/800a54615af3d6ea96add0fcea90d93258d7e23c))
+
 ## [1.8.3](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.2...v1.8.3) (2021-06-22)
 
 
