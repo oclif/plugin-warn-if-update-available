@@ -23,24 +23,34 @@ const hook: Hook<"init"> = async function ({ config }) {
     }
   };
 
+  // handle the situation where the host cli has not yet published a package. if this
+  // plugin is installed on it, it will always fail the check since the registry will
+  // return a 404. by catching the 404 and returning null, we get the chance to write the
+  // last-update-check file so that we can avoid checking each time. the content being
+  // null is a handled case in `checkVersion`.
+  const readLatestRemoteManifest = async (): Promise<any | null> => {
+    try {
+      return await libnpm.manifest(
+        `${packageName}@latest`,
+        libnpm.config.read()
+      );
+    } catch (error) {
+      if (error.code === "E404") {
+        return null;
+      }
+      throw error;
+    }
+  };
+
   const checkForUpdate = async () => {
     try {
       cli.action.start("checking for updates");
 
-      const latestManifest = await libnpm.manifest(
-        `${packageName}@latest`,
-        libnpm.config.read()
-      );
+      const latestManifest = await readLatestRemoteManifest();
 
       await fs.writeFile(updateCheckPath, JSON.stringify(latestManifest), {
         encoding: "utf8",
       });
-    } catch (error) {
-      // when the host has not yet published any packages, the registry will return a 404.
-      // we swallow this error to avoid erroring out the host cli
-      if (error.code !== "E404") {
-        throw error;
-      }
     } finally {
       cli.action.stop();
     }
@@ -49,7 +59,7 @@ const hook: Hook<"init"> = async function ({ config }) {
     await checkVersion(true);
   };
 
-  const readLatestManifest = async (): Promise<any | null> => {
+  const readLatestLocalManifest = async (): Promise<any | null> => {
     try {
       return JSON.parse(
         await fs.readFile(updateCheckPath, {
@@ -62,7 +72,7 @@ const hook: Hook<"init"> = async function ({ config }) {
   };
 
   const checkVersion = async (printStatus?: boolean) => {
-    const latestManifest = await readLatestManifest();
+    const latestManifest = await readLatestLocalManifest();
 
     // No version check has happened, so we can't tell if we're the latest version:
     if (latestManifest === null) {
