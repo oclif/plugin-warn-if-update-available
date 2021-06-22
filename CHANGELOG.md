@@ -1,3 +1,23 @@
+# [1.8.0](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.7.0...v1.8.0) (2021-06-22)
+
+
+### Bug Fixes
+
+* configure the destination registry where the package will be published to ([200d0e5](https://github.com/envoy/plugin-warn-if-update-available/commit/200d0e553c57d2de99689fef93c750632f809c0a))
+* lint issues ([903b6bd](https://github.com/envoy/plugin-warn-if-update-available/commit/903b6bd2ea826ca40aacfb7705dd010cba0eebb7))
+* no explicit export ([c8eaf7b](https://github.com/envoy/plugin-warn-if-update-available/commit/c8eaf7b5181e57e580ad9997403a684ec029be08))
+* remove org-global context ([386402d](https://github.com/envoy/plugin-warn-if-update-available/commit/386402db5de05fec7ab54ffbff7e001d84d323f4))
+* silence warning about no type defs for libnpm ([eac4360](https://github.com/envoy/plugin-warn-if-update-available/commit/eac43600fdcfebb2ef64ac008ac2268e0c5ff995))
+* update owner so we can publish to github private registry ([13b5eeb](https://github.com/envoy/plugin-warn-if-update-available/commit/13b5eeb9339cd0a8e15f80776bd096009c92390a))
+
+
+### Features
+
+* add eslint-config-prettier to silence formatting warnings ([37ccbd8](https://github.com/envoy/plugin-warn-if-update-available/commit/37ccbd80c76994f9197adf504bbf63e36331b96b))
+* add required packages ([adb063a](https://github.com/envoy/plugin-warn-if-update-available/commit/adb063a67bf4ebd2ab41bf050ef9050e4f934564))
+* remove unneeded packages ([61fa298](https://github.com/envoy/plugin-warn-if-update-available/commit/61fa298f79aa32234adbdee04adf36419150d700))
+* replace implementation with one that respects npmrc and semver ([4e34773](https://github.com/envoy/plugin-warn-if-update-available/commit/4e347739f674e2d58e55e37293b496fe53ac06d6))
+
 ## [1.5.4](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.3...v1.5.4) (2018-10-13)
 
 
