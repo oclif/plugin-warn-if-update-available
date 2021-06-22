@@ -4,8 +4,8 @@ import * as semver from "semver";
 import * as fs from "fs-extra";
 import * as path from "path";
 import cli from "cli-ux";
-import * as template from "lodash.template";
-import * as chalk from "chalk";
+import template from "lodash.template";
+import chalk from "chalk";
 
 const hook: Hook<"init"> = async function ({ config }) {
   const { name: packageName, version: currentVersion } = config;
