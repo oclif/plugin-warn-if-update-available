@@ -1,4 +1,3 @@
-describe('warn-if-update-available', () => {
-  it.skip('todo', () => {
-  })
-})
+describe("warn-if-update-available", () => {
+  it.skip("todo", () => {});
+});
