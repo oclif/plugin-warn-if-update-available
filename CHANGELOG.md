@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.0...v1.8.1) (2021-06-22)
+
+
+### Bug Fixes
+
+* import libnpm correctly ([46def4a](https://github.com/envoy/plugin-warn-if-update-available/commit/46def4aed73e6670c17997e4f2bfd673b4ba86ef))
+
 # [1.8.0](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.7.0...v1.8.0) (2021-06-22)
 
 
