@@ -56,9 +56,8 @@ workflows:
       - node-12
       - node-10
       - release:
-          context: org-global
           filters:
-            branches: {only: master}
+            branches: { only: master }
           requires:
             - node-latest
             - node-12
