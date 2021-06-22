@@ -1,5 +1,5 @@
 import { Hook } from "@oclif/config";
-import libnpm, { Manifest } from "libnpm";
+import * as libnpm from "libnpm";
 import * as semver from "semver";
 import * as fs from "fs-extra";
 import * as path from "path";
@@ -27,7 +27,7 @@ const hook: Hook<"init"> = async function ({ config }) {
     try {
       cli.action.start("checking for updates");
 
-      const latestManifest: Manifest = await libnpm.manifest(
+      const latestManifest = await libnpm.manifest(
         `${packageName}@latest`,
         libnpm.config.read()
       );
@@ -43,7 +43,7 @@ const hook: Hook<"init"> = async function ({ config }) {
     await checkVersion(true);
   };
 
-  const readLatestManifest = async (): Promise<Manifest | null> => {
+  const readLatestManifest = async (): Promise<any | null> => {
     try {
       return JSON.parse(
         await fs.readFile(updateCheckPath, {
