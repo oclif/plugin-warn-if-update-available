@@ -1,19 +1,17 @@
-@oclif/plugin-warn-if-update-available
-======================================
+# @envoy/plugin-warn-if-update-available
 
 warns if there is a newer version of CLI released
 
-[![Version](https://img.shields.io/npm/v/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
-[![CircleCI](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/master.svg?style=shield)](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/master)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/oclif/plugin-warn-if-update-available?branch=master&svg=true)](https://ci.appveyor.com/project/oclif/plugin-warn-if-update-available/branch/master)
-[![Downloads/week](https://img.shields.io/npm/dw/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
-[![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/oclif/plugin-warn-if-update-available/blob/master/package.json)
+[![Version](https://img.shields.io/github/package-json/v/envoy/plugin-warn-if-update-available)](https://github.com/envoy/plugin-warn-if-update-available/packages/860241)
+[![CircleCI](https://circleci.com/gh/envoy/plugin-warn-if-update-available/tree/master.svg?style=shield)](https://circleci.com/gh/envoy/plugin-warn-if-update-available/tree/master.svg?style=shield)
+[![License](https://img.shields.io/github/license/envoy/plugin-warn-if-update-available)](https://github.com/envoy/plugin-warn-if-update-available/blob/master/package.json)
 
 <!-- toc -->
-* [What is this?](#what-is-this)
-* [How it works](#how-it-works)
-* [Installation](#installation)
-* [Configuration](#configuration)
+
+- [What is this?](#what-is-this)
+- [How it works](#how-it-works)
+- [Installation](#installation)
+- [Configuration](#configuration)
 <!-- tocstop -->
 
 # What is this?
@@ -28,7 +26,7 @@ This checks the version against the npm registry asynchronously in a forked proc
 
 # Installation
 
-Add the plugin to your project with `yarn add @oclif/plugin-warn-if-update-available`, then add it to the `package.json` of the oclif CLI:
+Add the plugin to your project with `yarn add @envoy/plugin-warn-if-update-available`, then add it to the `package.json` of the oclif CLI:
 
 ```js
 {
@@ -36,7 +34,7 @@ Add the plugin to your project with `yarn add @oclif/plugin-warn-if-update-avail
   "version": "0.0.0",
   // ...
   "oclif": {
-    "plugins": ["@oclif/plugin-help", "@oclif/plugin-warn-if-update-available"]
+    "plugins": ["@oclif/plugin-help", "@envoy/plugin-warn-if-update-available"]
   }
 }
 ```
@@ -56,9 +54,7 @@ any of the following configuration properties:
 ```json
 {
   "oclif": {
-    "plugins": [
-      "@oclif/plugin-warn-if-update-available"
-    ],
+    "plugins": ["@envoy/plugin-warn-if-update-available"],
     "warn-if-update-available": {
       "timeoutInDays": 7,
       "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
