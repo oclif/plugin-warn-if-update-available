@@ -1,3 +1,10 @@
+## [1.8.5](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.4...v1.8.5) (2021-06-22)
+
+
+### Bug Fixes
+
+* avoid constant checks when the host cli is unpublished ([9ec3c0f](https://github.com/envoy/plugin-warn-if-update-available/commit/9ec3c0f30bce52908107feccf085c6feb6a8589f))
+
 ## [1.8.4](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.3...v1.8.4) (2021-06-22)
 
 
