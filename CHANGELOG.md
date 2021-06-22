@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.1...v1.8.2) (2021-06-22)
+
+
+### Bug Fixes
+
+* prettier ([8d0f4a4](https://github.com/envoy/plugin-warn-if-update-available/commit/8d0f4a466a04a9ceaa7c05161ad1c7e31af0ffb5))
+
 ## [1.8.1](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.0...v1.8.1) (2021-06-22)
 
 
