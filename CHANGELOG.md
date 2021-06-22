@@ -1,3 +1,16 @@
+# [1.9.0](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.5...v1.9.0) (2021-06-22)
+
+
+### Bug Fixes
+
+* correct imports for lodash.template and chalk ([b0d0ee6](https://github.com/envoy/plugin-warn-if-update-available/commit/b0d0ee677f2ae2fbb14668b831a7116556dce97e))
+
+
+### Features
+
+* readd chalk and lodash.template ([b0a34a7](https://github.com/envoy/plugin-warn-if-update-available/commit/b0a34a7b8fec69ac22fd19d25e6c011550177945))
+* support timeOutInDays and message config ([db220a3](https://github.com/envoy/plugin-warn-if-update-available/commit/db220a3614a25d57471b75872c65f85258cc5db6))
+
 ## [1.8.5](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.4...v1.8.5) (2021-06-22)
 
 

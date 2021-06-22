@@ -7,11 +7,11 @@ warns if there is a newer version of CLI released
 [![License](https://img.shields.io/github/license/envoy/plugin-warn-if-update-available)](https://github.com/envoy/plugin-warn-if-update-available/blob/master/package.json)
 
 <!-- toc -->
-
-- [What is this?](#what-is-this)
-- [How it works](#how-it-works)
-- [Installation](#installation)
-- [Configuration](#configuration)
+* [@envoy/plugin-warn-if-update-available](#envoyplugin-warn-if-update-available)
+* [What is this?](#what-is-this)
+* [How it works](#how-it-works)
+* [Installation](#installation)
+* [Configuration](#configuration)
 <!-- tocstop -->
 
 # What is this?
