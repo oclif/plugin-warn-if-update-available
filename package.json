@@ -64,5 +64,8 @@
     "postpublish": "yarn run clean",
     "preversion": "yarn run clean",
     "version": "oclif-dev readme && git add README.md"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
