@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.9.0...v1.9.1) (2021-06-24)
+
+
+### Bug Fixes
+
+* use outputJSON to write last-update-check file ([ca306e1](https://github.com/envoy/plugin-warn-if-update-available/commit/ca306e10c98cce255713bef7ba1757cd971489a2))
+
 # [1.9.0](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.8.5...v1.9.0) (2021-06-22)
 
 
