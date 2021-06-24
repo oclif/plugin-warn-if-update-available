@@ -53,7 +53,7 @@ const hook: Hook<"init"> = async function ({ config }) {
 
       const latestManifest = await readLatestRemoteManifest();
 
-      await fs.writeFile(updateCheckPath, JSON.stringify(latestManifest), {
+      await fs.outputJSON(updateCheckPath, latestManifest, {
         encoding: "utf8",
       });
     } finally {
@@ -66,11 +66,7 @@ const hook: Hook<"init"> = async function ({ config }) {
 
   const readLatestLocalManifest = async (): Promise<any | null> => {
     try {
-      return JSON.parse(
-        await fs.readFile(updateCheckPath, {
-          encoding: "utf8",
-        })
-      );
+      return await fs.readJSON(updateCheckPath, { encoding: "utf8" });
     } catch (error) {
       return null;
     }
