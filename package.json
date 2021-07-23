@@ -20,7 +20,7 @@
     "@types/chai": "^4.2.21",
     "@types/fs-extra": "^9.0.12",
     "@types/lodash.template": "^4.4.5",
-    "@types/mocha": "^8.0.0",
+    "@types/mocha": "^8.2.3",
     "@types/node": "^16.4.1",
     "@types/semver": "^7.3.7",
     "chai": "^4.3.4",
