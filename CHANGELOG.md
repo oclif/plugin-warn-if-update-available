@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.9.1...v1.9.2) (2021-07-23)
+
+
+### Bug Fixes
+
+* update dependencies ([50df4f8](https://github.com/envoy/plugin-warn-if-update-available/commit/50df4f8fd56e16db3a9965cdb9a321620994453c))
+
 ## [1.9.1](https://github.com/envoy/plugin-warn-if-update-available/compare/v1.9.0...v1.9.1) (2021-06-24)
 
 

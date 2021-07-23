@@ -1,7 +1,7 @@
 {
   "name": "@envoy/plugin-warn-if-update-available",
   "description": "warns if there is a newer version of CLI released",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/envoy/plugin-warn-if-update-available/issues",
   "dependencies": {
