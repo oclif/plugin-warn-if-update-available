@@ -28,7 +28,7 @@
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.2.0",
     "eslint-config-prettier": "^8.3.0",
-    "globby": "^11.0.1",
+    "globby": "^11.0.4",
     "mocha": "^8.0.1",
     "ts-node": "^9.1.1",
     "tslib": "^2.3.0",
