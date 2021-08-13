@@ -49,8 +49,8 @@
   "oclif": {
     "bin": "oclif-example",
     "hooks": {
-      "init": [
-        "./lib/hooks/init/check-update"
+      "postrun": [
+        "./lib/hooks/postrun/check-update"
       ]
     }
   },

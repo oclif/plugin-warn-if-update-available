@@ -7,7 +7,7 @@ import cli from "cli-ux";
 import template from "lodash.template";
 import chalk from "chalk";
 
-const hook: Hook<"init"> = async function ({ config }) {
+const hook: Hook<"postrun"> = async function ({ config }) {
   const { name: packageName, version: currentVersion } = config;
   // Destructure package.json configuration with defaults
   const {
