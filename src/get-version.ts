@@ -1,6 +1,7 @@
 import * as fs from 'fs-extra'
 import HTTP from 'http-call'
 
+// eslint-disable-next-line max-params
 async function run(name: string, file: string, version: string, registry: string, authorization: string) {
   const url = [
     registry.replace(/\/+$/, ''), // remove trailing slash
