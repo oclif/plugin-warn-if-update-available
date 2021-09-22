@@ -1,4 +1,4 @@
-import {Hook} from '@oclif/config'
+import {Hook} from '@oclif/core'
 import * as Chalk from 'chalk'
 import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
