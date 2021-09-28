@@ -1,4 +1,4 @@
-import {Hook} from '@oclif/config'
+import {Hook} from '@oclif/core'
 import * as Chalk from 'chalk'
 import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
@@ -25,7 +25,7 @@ const hook: Hook<'init'> = async function ({config}) {
       if (process.argv[2] === 'update') return
       const distTags = await fs.readJSON(file)
       if (config.version.includes('-')) {
-        // TODO: handle channels
+        // to-do: handle channels
         return
       }
       if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
@@ -38,7 +38,7 @@ const hook: Hook<'init'> = async function ({config}) {
           ...distTags,
         }))
       }
-    } catch (error) {
+    } catch (error: any) {
       if (error.code !== 'ENOENT') throw error
     }
   }
