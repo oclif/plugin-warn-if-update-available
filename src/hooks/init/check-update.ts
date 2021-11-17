@@ -2,7 +2,7 @@ import {Hook} from '@oclif/config'
 import * as Chalk from 'chalk'
 import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
-import Template = require('lodash.template')
+import * as _ from 'lodash'
 import * as path from 'path'
 import * as semver from 'semver'
 
@@ -30,7 +30,7 @@ const hook: Hook<'init'> = async function ({config}) {
       }
       if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
         const chalk: typeof Chalk = require('chalk')
-        const template: typeof Template = require('lodash.template')
+        const template = _.template
         // Default message if the user doesn't provide one
         this.warn(template(message)({
           chalk,
