@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.7.1...v1.7.2) (2021-11-23)
+
+
+### Bug Fixes
+
+* force release ([39b6b7c](https://github.com/oclif/plugin-warn-if-update-available/commit/39b6b7cdf5fa0d257e2eb3bdb26ac8cefc09e80e))
+
 ## [1.7.1](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.7.0...v1.7.1) (2021-11-23)
 
 
