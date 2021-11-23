@@ -53,8 +53,8 @@ workflows:
   "@oclif/plugin-warn-if-update-available":
     jobs:
       - node-latest
+      - node-14
       - node-12
-      - node-10
       - release:
           context: org-global
           filters:
