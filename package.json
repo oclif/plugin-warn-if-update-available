@@ -1,7 +1,7 @@
 {
   "name": "@oclif/plugin-warn-if-update-available",
   "description": "warns if there is a newer version of CLI released",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "author": "Jeff Dickey @jdxcode",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {

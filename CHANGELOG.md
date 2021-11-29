@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.7.2...v1.7.3) (2021-11-29)
+
+
+### Bug Fixes
+
+* lodash.template dep remove ([#228](https://github.com/oclif/plugin-warn-if-update-available/issues/228)) ([71d0fb4](https://github.com/oclif/plugin-warn-if-update-available/commit/71d0fb42ad04cf6400d53efe4285a8de85568981))
+
 ## [1.7.2](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.7.1...v1.7.2) (2021-11-23)
 
 
