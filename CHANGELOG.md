@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [2.0.1](https://github.com/oclif/plugin-warn-if-update-available/compare/v2.0.0...v2.0.1) (2021-12-01)
+
+
+### Bug Fixes
+
+* remove lodash.template dep ([#232](https://github.com/oclif/plugin-warn-if-update-available/issues/232)) ([ba90789](https://github.com/oclif/plugin-warn-if-update-available/commit/ba90789014ae58a044d76802f7326893b0f36a61))
+
 ## [1.5.4](https://github.com/oclif/plugin-warn-if-update-available/compare/v1.5.3...v1.5.4) (2018-10-13)
 
 
