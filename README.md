@@ -4,16 +4,18 @@
 warns if there is a newer version of CLI released
 
 [![Version](https://img.shields.io/npm/v/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
-[![CircleCI](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/master.svg?style=shield)](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/master)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/oclif/plugin-warn-if-update-available?branch=master&svg=true)](https://ci.appveyor.com/project/oclif/plugin-warn-if-update-available/branch/master)
+[![CircleCI](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/main)
+[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/oclif/plugin-warn-if-update-available?branch=main&svg=true)](https://ci.appveyor.com/project/oclif/plugin-warn-if-update-available/branch/main)
 [![Downloads/week](https://img.shields.io/npm/dw/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
-[![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/oclif/plugin-warn-if-update-available/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/oclif/plugin-warn-if-update-available/blob/main/package.json)
 
 <!-- toc -->
-* [What is this?](#what-is-this)
-* [How it works](#how-it-works)
-* [Installation](#installation)
-* [Configuration](#configuration)
+- [@oclif/plugin-warn-if-update-available](#oclifplugin-warn-if-update-available)
+- [What is this?](#what-is-this)
+- [How it works](#how-it-works)
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Example configuration](#example-configuration)
 <!-- tocstop -->
 
 # What is this?
