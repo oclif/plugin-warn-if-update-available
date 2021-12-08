@@ -2,7 +2,7 @@
   "name": "@oclif/plugin-warn-if-update-available",
   "description": "warns if there is a newer version of CLI released",
   "version": "2.0.2",
-  "author": "Jeff Dickey @jdxcode",
+  "author": "Salesforce",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
     "@oclif/core": "^1.0.8",
