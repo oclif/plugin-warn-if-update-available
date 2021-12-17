@@ -10,12 +10,10 @@ warns if there is a newer version of CLI released
 [![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/oclif/plugin-warn-if-update-available/blob/main/package.json)
 
 <!-- toc -->
-- [@oclif/plugin-warn-if-update-available](#oclifplugin-warn-if-update-available)
-- [What is this?](#what-is-this)
-- [How it works](#how-it-works)
-- [Installation](#installation)
-- [Configuration](#configuration)
-  - [Example configuration](#example-configuration)
+* [What is this?](#what-is-this)
+* [How it works](#how-it-works)
+* [Installation](#installation)
+* [Configuration](#configuration)
 <!-- tocstop -->
 
 # What is this?
