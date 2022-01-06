@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.4](https://github.com/oclif/plugin-warn-if-update-available/compare/v2.0.3...v2.0.4) (2022-01-06)
+
+
+### Bug Fixes
+
+* add main to package.json ([#249](https://github.com/oclif/plugin-warn-if-update-available/issues/249)) ([761e127](https://github.com/oclif/plugin-warn-if-update-available/commit/761e12724f390148d4dc514be7a6b7c101a3b4dd))
+
 ### [2.0.3](https://github.com/oclif/plugin-warn-if-update-available/compare/v2.0.2...v2.0.3) (2021-12-17)
 
 ### [2.0.2](https://github.com/oclif/plugin-warn-if-update-available/compare/v2.0.1...v2.0.2) (2021-12-07)
