@@ -64,5 +64,6 @@
     "postpublish": "yarn run clean",
     "preversion": "yarn run clean",
     "version": "oclif readme && git add README.md"
-  }
+  },
+  "main": "lib/index.js"
 }
