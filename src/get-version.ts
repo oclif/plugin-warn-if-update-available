@@ -9,9 +9,13 @@ async function run(name: string, file: string, version: string, registry: string
   ].join('/')
   const headers = authorization ? {authorization} : {}
 
-  await fs.outputJSON(file, {current: version, headers}) // touch file with current version to prevent multiple updates
-  const {body} = await HTTP.get<any>(url, {headers, timeout: 5000})
-  await fs.outputJSON(file, {...body['dist-tags'], current: version, authorization})
+  try {
+    await fs.outputJSON(file, {current: version}) // touch file with current version to prevent multiple updates
+    const {body} = await HTTP.get<any>(url, {headers, timeout: 5000})
+    await fs.outputJSON(file, {...body['dist-tags'], current: version})
+  } catch (error) {
+    console.error(error)
+  }
   process.exit(0) // eslint-disable-line unicorn/no-process-exit, no-process-exit
 }
 
