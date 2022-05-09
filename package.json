@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@oclif/test": "^1.2.8",
-    "@types/chai": "^4.1.6",
+    "@types/chai": "^4.3.1",
     "@types/fs-extra": "^9.0.1",
     "@types/lodash": "^4.14.182",
     "@types/mocha": "^8.0.0",
