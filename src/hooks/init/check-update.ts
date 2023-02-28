@@ -44,7 +44,7 @@ const hook: Hook<'init'> = async function ({config}) {
   }
 
   const refreshNeeded = async () => {
-    if (process.env.FORCE_VERSION_CACHE_UPDATE) return true
+    if (this.config.scopedEnvVarTrue('FORCE_VERSION_CACHE_UPDATE')) return true
     try {
       const {mtime} = await fs.stat(file)
       const staleAt = new Date(mtime.valueOf() + (1000 * 60 * 60 * 24 * timeoutInDays))
