@@ -21,13 +21,14 @@ const hook: Hook<'init'> = async function ({config}) {
 
   const checkVersion = async () => {
     try {
-      // do not show warning if updating
-      if (process.argv[2] === 'update') return
-      const distTags = await fs.readJSON(file)
+      // do not show warning if updating or the user doesn't want it
+      if (process.argv[2] === 'update' || this.config.scopedEnvVarTrue('SKIP_UPDATE_CHECK')) return
+
       if (config.version.includes('-')) {
         // to-do: handle channels
         return
       }
+      const distTags = await fs.readJSON(file)
       if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
         const chalk: typeof Chalk = require('chalk')
         const template = _.template
@@ -45,6 +46,7 @@ const hook: Hook<'init'> = async function ({config}) {
 
   const refreshNeeded = async () => {
     if (this.config.scopedEnvVarTrue('FORCE_VERSION_CACHE_UPDATE')) return true
+    if (this.config.scopedEnvVarTrue('SKIP_UPDATE_CHECK')) return false
     try {
       const {mtime} = await fs.stat(file)
       const staleAt = new Date(mtime.valueOf() + (1000 * 60 * 60 * 24 * timeoutInDays))
