@@ -1,3 +1,12 @@
+## [2.0.31](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.30...2.0.31) (2023-03-12)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.4.0 to 2.6.2 ([d334ce8](https://github.com/oclif/plugin-warn-if-update-available/commit/d334ce8c4985b93704020a75f46a8ae9f2dbde93))
+
+
+
 ## [2.0.30](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.29...2.0.30) (2023-03-05)
 
 
