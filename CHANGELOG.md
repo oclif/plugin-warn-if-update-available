@@ -1,3 +1,12 @@
+## [2.0.37](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.36...2.0.37) (2023-05-14)
+
+
+### Bug Fixes
+
+* **deps:** bump semver and @types/semver ([426f01f](https://github.com/oclif/plugin-warn-if-update-available/commit/426f01fb9f52a25e49053bddf82c323b39568211))
+
+
+
 ## [2.0.36](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.35...2.0.36) (2023-04-23)
 
 
