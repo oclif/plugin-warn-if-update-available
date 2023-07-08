@@ -11,7 +11,7 @@
     "fs-extra": "^9.0.1",
     "http-call": "^5.2.2",
     "lodash": "^4.17.21",
-    "semver": "^7.5.3"
+    "semver": "^7.5.4"
   },
   "devDependencies": {
     "@oclif/test": "^1.2.8",
