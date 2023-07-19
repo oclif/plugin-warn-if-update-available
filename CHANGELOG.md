@@ -1,3 +1,12 @@
+## [2.0.44](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.43...2.0.44) (2023-07-19)
+
+
+### Bug Fixes
+
+* **deps:** bump word-wrap from 1.2.3 to 1.2.4 ([5c7e6a4](https://github.com/oclif/plugin-warn-if-update-available/commit/5c7e6a4e744f43c9163d425aa93da4d3fc7bc759))
+
+
+
 ## [2.0.43](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.42...2.0.43) (2023-07-16)
 
 
