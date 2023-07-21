@@ -1,7 +1,6 @@
 {
   "require": [
-    "test/helpers/init.js",
-    "source-map-support/register"
+    "test/helpers/init.js"
   ],
   "node-option": [
     "experimental-specifier-resolution=node",
