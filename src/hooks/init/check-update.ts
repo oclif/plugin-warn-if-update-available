@@ -1,15 +1,13 @@
+import * as path from 'node:path'
 import {Hook} from '@oclif/core'
-import * as Chalk from 'chalk'
-import {spawn} from 'child_process'
 import * as fs from 'fs-extra'
-import * as _ from 'lodash'
-import * as path from 'path'
-import * as semver from 'semver'
-
-const debug = require('debug')('update-check')
+import debugLib from 'debug'
+import {spawn} from 'node:child_process'
+import {gt} from 'semver'
 
 const hook: Hook<'init'> = async function ({config}) {
   const file = path.join(config.cacheDir, 'version')
+  const debug = debugLib('update-check')
 
   // Destructure package.json configuration with defaults
   const {
@@ -28,15 +26,19 @@ const hook: Hook<'init'> = async function ({config}) {
         // to-do: handle channels
         return
       }
-      if (distTags && distTags.latest && semver.gt(distTags.latest.split('-')[0], config.version.split('-')[0])) {
-        const chalk: typeof Chalk = require('chalk')
-        const template = _.template
+      if (
+        distTags?.latest &&
+        gt(distTags.latest.split('-')[0], config.version.split('-')[0])
+      ) {
+        const [chalk, {template}] = await Promise.all([import('chalk'), import('lodash')])
         // Default message if the user doesn't provide one
-        this.warn(template(message)({
-          chalk,
-          config,
-          ...distTags,
-        }))
+        this.warn(
+          template(message)({
+            chalk,
+            config,
+            ...distTags,
+          }),
+        )
       }
     } catch (error: any) {
       if (error.code !== 'ENOENT') throw error
@@ -47,7 +49,9 @@ const hook: Hook<'init'> = async function ({config}) {
     if (this.config.scopedEnvVarTrue('FORCE_VERSION_CACHE_UPDATE')) return true
     try {
       const {mtime} = await fs.stat(file)
-      const staleAt = new Date(mtime.valueOf() + (1000 * 60 * 60 * 24 * timeoutInDays))
+      const staleAt = new Date(
+        mtime.valueOf() + (1000 * 60 * 60 * 24 * timeoutInDays),
+      )
       return staleAt < new Date()
     } catch (error) {
       debug(error)
@@ -57,9 +61,17 @@ const hook: Hook<'init'> = async function ({config}) {
 
   const spawnRefresh = async () => {
     debug('spawning version refresh')
+
     spawn(
       process.execPath,
-      [path.join(__dirname, '../../../lib/get-version'), config.name, file, config.version, registry, authorization],
+      [
+        path.join(__dirname, '../../../lib/get-version'),
+        config.name,
+        file,
+        config.version,
+        registry,
+        authorization,
+      ],
       {
         detached: !config.windows,
         stdio: 'ignore',

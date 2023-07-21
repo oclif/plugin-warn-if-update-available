@@ -1,8 +1,11 @@
 {
   "require": [
     "test/helpers/init.js",
-    "ts-node/register",
     "source-map-support/register"
+  ],
+  "node-option": [
+    "experimental-specifier-resolution=node",
+    "loader=ts-node/esm"
   ],
   "watch-extensions": [
     "ts"

@@ -1,5 +1,7 @@
 import * as fs from 'fs-extra'
-import HTTP from 'http-call'
+import {HTTP} from 'http-call'
+// @ts-expect-error no types
+import handle from '@oclif/core/handle.js'
 
 // eslint-disable-next-line max-params
 async function run(name: string, file: string, version: string, registry: string, authorization: string) {
@@ -16,4 +18,4 @@ async function run(name: string, file: string, version: string, registry: string
 }
 
 run(process.argv[2], process.argv[3], process.argv[4], process.argv[5], process.argv[6])
-.catch(require('@oclif/core/handle'))
+.catch(handle)

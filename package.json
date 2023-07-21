@@ -1,9 +1,10 @@
 {
   "name": "@oclif/plugin-warn-if-update-available",
   "description": "warns if there is a newer version of CLI released",
-  "version": "2.0.44",
+  "version": "3.0.0",
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
+  "type": "module",
   "dependencies": {
     "@oclif/core": "^2.9.3",
     "chalk": "^4.1.0",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@oclif/test": "^1.2.8",
     "@types/chai": "^4.3.5",
+    "@types/debug": "^4.1.8",
     "@types/fs-extra": "^9.0.1",
     "@types/lodash": "^4.14.195",
     "@types/mocha": "^8.0.0",
@@ -28,12 +30,12 @@
     "globby": "^11.0.1",
     "mocha": "^8.0.1",
     "oclif": "^3.9.1",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.9.1",
     "tslib": "^2.6.0",
-    "typescript": "4.4.3"
+    "typescript": "^4.9.5"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=16.0.0"
   },
   "files": [
     "oclif.manifest.json",
@@ -65,5 +67,5 @@
     "preversion": "yarn run clean",
     "version": "oclif readme && git add README.md"
   },
-  "main": "lib/index.js"
+  "exports": "./lib/index.js"
 }
