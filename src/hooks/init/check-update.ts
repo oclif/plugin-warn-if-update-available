@@ -1,6 +1,6 @@
 import * as path from 'node:path'
 import {Hook} from '@oclif/core'
-import * as fs from 'fs-extra'
+import {readJSON, stat} from 'fs-extra'
 import debugLib from 'debug'
 import {spawn} from 'node:child_process'
 import {gt} from 'semver'
@@ -21,7 +21,7 @@ const hook: Hook<'init'> = async function ({config}) {
     try {
       // do not show warning if updating
       if (process.argv[2] === 'update') return
-      const distTags = await fs.readJSON(file)
+      const distTags = await readJSON(file)
       if (config.version.includes('-')) {
         // to-do: handle channels
         return
@@ -48,7 +48,7 @@ const hook: Hook<'init'> = async function ({config}) {
   const refreshNeeded = async () => {
     if (this.config.scopedEnvVarTrue('FORCE_VERSION_CACHE_UPDATE')) return true
     try {
-      const {mtime} = await fs.stat(file)
+      const {mtime} = await stat(file)
       const staleAt = new Date(
         mtime.valueOf() + (1000 * 60 * 60 * 24 * timeoutInDays),
       )
