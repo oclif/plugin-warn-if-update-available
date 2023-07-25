@@ -1,3 +1,12 @@
+## [2.0.45](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.44...2.0.45) (2023-07-23)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.9.3 to 2.9.4 ([dcebadd](https://github.com/oclif/plugin-warn-if-update-available/commit/dcebaddcf036ffce37335027f7d25132f438f4d4))
+
+
+
 ## [2.0.44](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.43...2.0.44) (2023-07-19)
 
 
