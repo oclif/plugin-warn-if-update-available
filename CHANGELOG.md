@@ -1,3 +1,12 @@
+## [2.0.47](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.46...2.0.47) (2023-08-13)
+
+
+### Bug Fixes
+
+* **deps:** bump ansi-regex from 3.0.0 to 3.0.1 ([8ed09e6](https://github.com/oclif/plugin-warn-if-update-available/commit/8ed09e604b2314e470fa3bfb4a15c7feefd2520c))
+
+
+
 ## [2.0.46](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.45...2.0.46) (2023-07-30)
 
 
