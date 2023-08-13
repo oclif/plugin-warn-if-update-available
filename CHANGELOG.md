@@ -1,3 +1,12 @@
+## [2.0.48](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.47...2.0.48) (2023-08-13)
+
+
+### Bug Fixes
+
+* **deps:** bump @oclif/core from 2.11.7 to 2.11.8 ([d201be1](https://github.com/oclif/plugin-warn-if-update-available/commit/d201be166cb36b509fc49f374ba4744a7840771f))
+
+
+
 ## [2.0.47](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.46...2.0.47) (2023-08-13)
 
 
