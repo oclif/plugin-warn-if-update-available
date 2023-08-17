@@ -8,16 +8,14 @@
     "@oclif/core": "^2.11.8",
     "chalk": "^4.1.0",
     "debug": "^4.1.0",
-    "fs-extra": "^9.0.1",
     "http-call": "^5.2.2",
-    "lodash": "^4.17.21",
+    "lodash.template": "^4.5.0",
     "semver": "^7.5.4"
   },
   "devDependencies": {
     "@oclif/test": "^1.2.8",
     "@types/chai": "^4.3.5",
-    "@types/fs-extra": "^9.0.1",
-    "@types/lodash": "^4.14.197",
+    "@types/lodash.template": "^4.5.1",
     "@types/mocha": "^8.0.0",
     "@types/node": "^14.18.54",
     "@types/semver": "^7.5.0",
