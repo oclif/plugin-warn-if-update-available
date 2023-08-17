@@ -54,6 +54,8 @@ const hook: Hook<'init'> = async function ({config}) {
   }
 
   const spawnRefresh = async () => {
+    const debug = require('debug')('update-check')
+    debug('spawning version refresh')
     spawn(
       process.execPath,
       [join(__dirname, '../../../lib/get-version'), config.name, file, config.version, registry, authorization],
