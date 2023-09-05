@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.50...2.1.0) (2023-09-05)
+
+
+### Features
+
+* dependency reduction and deferred/smaller imports ([#413](https://github.com/oclif/plugin-warn-if-update-available/issues/413)) ([1676696](https://github.com/oclif/plugin-warn-if-update-available/commit/1676696eb577f5dc5ba2601e5da2ab986d3b3fc6))
+
+
+
 ## [2.0.50](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.49...2.0.50) (2023-09-03)
 
 
