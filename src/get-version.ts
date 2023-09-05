@@ -1,5 +1,6 @@
-import * as fs from 'fs-extra'
+import {writeFile, mkdir} from 'fs/promises'
 import HTTP from 'http-call'
+import {dirname} from 'path'
 
 // eslint-disable-next-line max-params
 async function run(name: string, file: string, version: string, registry: string, authorization: string) {
@@ -8,10 +9,10 @@ async function run(name: string, file: string, version: string, registry: string
     name.replace('/', '%2f'),      // scoped packages need escaped separator
   ].join('/')
   const headers = authorization ? {authorization} : {}
-
-  await fs.outputJSON(file, {current: version, headers}) // touch file with current version to prevent multiple updates
+  await mkdir(dirname(file), {recursive: true})
+  await writeFile(file, JSON.stringify({current: version, headers})) // touch file with current version to prevent multiple updates
   const {body} = await HTTP.get<any>(url, {headers, timeout: 5000})
-  await fs.outputJSON(file, {...body['dist-tags'], current: version, authorization})
+  await writeFile(file, JSON.stringify({...body['dist-tags'], current: version, authorization}))
   process.exit(0) // eslint-disable-line unicorn/no-process-exit, no-process-exit
 }
 
