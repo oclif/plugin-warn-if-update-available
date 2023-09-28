@@ -1,3 +1,12 @@
+## [2.1.1](https://github.com/oclif/plugin-warn-if-update-available/compare/2.1.0...2.1.1) (2023-09-28)
+
+
+### Bug Fixes
+
+* **deps:** bump get-func-name from 2.0.0 to 2.0.2 ([2008321](https://github.com/oclif/plugin-warn-if-update-available/commit/2008321e7d9cab1326dcb896303d30dc2ded9d6b))
+
+
+
 # [2.1.0](https://github.com/oclif/plugin-warn-if-update-available/compare/2.0.50...2.1.0) (2023-09-05)
 
 
