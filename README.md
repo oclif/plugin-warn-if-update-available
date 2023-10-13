@@ -1,19 +1,17 @@
-@oclif/plugin-warn-if-update-available
-======================================
+# @oclif/plugin-warn-if-update-available
 
 warns if there is a newer version of CLI released
 
 [![Version](https://img.shields.io/npm/v/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
-[![CircleCI](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/plugin-warn-if-update-available/tree/main)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/oclif/plugin-warn-if-update-available?branch=main&svg=true)](https://ci.appveyor.com/project/oclif/plugin-warn-if-update-available/branch/main)
 [![Downloads/week](https://img.shields.io/npm/dw/@oclif/plugin-warn-if-update-available.svg)](https://npmjs.org/package/@oclif/plugin-warn-if-update-available)
 [![License](https://img.shields.io/npm/l/@oclif/plugin-warn-if-update-available.svg)](https://github.com/oclif/plugin-warn-if-update-available/blob/main/package.json)
 
 <!-- toc -->
-* [What is this?](#what-is-this)
-* [How it works](#how-it-works)
-* [Installation](#installation)
-* [Configuration](#configuration)
+
+- [What is this?](#what-is-this)
+- [How it works](#how-it-works)
+- [Installation](#installation)
+- [Configuration](#configuration)
 <!-- tocstop -->
 
 # What is this?
@@ -56,9 +54,7 @@ any of the following configuration properties:
 ```json
 {
   "oclif": {
-    "plugins": [
-      "@oclif/plugin-warn-if-update-available"
-    ],
+    "plugins": ["@oclif/plugin-warn-if-update-available"],
     "warn-if-update-available": {
       "timeoutInDays": 7,
       "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
