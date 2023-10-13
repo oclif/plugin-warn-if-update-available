@@ -22,7 +22,7 @@ const hook: Hook<'init'> = async function ({config}) {
   const checkVersion = async () => {
     try {
       // do not show warning if updating
-      if (process.argv[2] === 'update') return
+      if (process.argv[2] === 'update' || this.config.scopedEnvVarTrue('SKIP_UPDATE_CHECK')) return
       const distTags = JSON.parse(await readFile(file, 'utf8'))
       if (config.version.includes('-')) {
         // to-do: handle prerelease channels
@@ -48,6 +48,7 @@ const hook: Hook<'init'> = async function ({config}) {
 
   const refreshNeeded = async () => {
     if (this.config.scopedEnvVarTrue('FORCE_VERSION_CACHE_UPDATE')) return true
+    if (this.config.scopedEnvVarTrue('SKIP_UPDATE_CHECK')) return false
     try {
       const {mtime} = await stat(file)
       const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays)

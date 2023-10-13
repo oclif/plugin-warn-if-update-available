@@ -8,10 +8,13 @@ warns if there is a newer version of CLI released
 
 <!-- toc -->
 
+- [@oclif/plugin-warn-if-update-available](#oclifplugin-warn-if-update-available)
 - [What is this?](#what-is-this)
 - [How it works](#how-it-works)
 - [Installation](#installation)
 - [Configuration](#configuration)
+  - [Example configuration](#example-configuration)
+- [Environment Variables](#environment-variables)
 <!-- tocstop -->
 
 # What is this?
@@ -64,3 +67,8 @@ any of the following configuration properties:
   }
 }
 ```
+
+# Environment Variables
+
+`<CLI>_SKIP_UPDATE_CHECK`: Skip this version check
+`<CLI>_FORCE_VERSION_CACHE_UPDATE`: Force the version cache to update
