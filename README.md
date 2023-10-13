@@ -14,6 +14,7 @@ warns if there is a newer version of CLI released
 - [Installation](#installation)
 - [Configuration](#configuration)
   - [Example configuration](#example-configuration)
+  - [Notification Frequency](#notification-frequency)
 - [Environment Variables](#environment-variables)
 <!-- tocstop -->
 
@@ -51,6 +52,8 @@ any of the following configuration properties:
 - `message` - Customize update message.
 - `registry` - URL of registry. Defaults to the public npm registry: `https://registry.npmjs.org`
 - `authorization` - Authorization header value for registries that require auth.
+- `frequency` - The frequency that the new version warning should be shown.
+- `frequencyUnit` - The unit of time that should be used to calculate the frequency (`days`, `hours`, `minutes`, `seconds`, `milliseconds`). Defaults to `minutes`.
 
 ## Example configuration
 
@@ -68,7 +71,66 @@ any of the following configuration properties:
 }
 ```
 
+## Notification Frequency
+
+Once a new version has been found, the default behavior is to notify the user on every command execution. You can modify this by setting the `frequency` and `frequencyUnit` options.
+
+**Examples**
+
+Once every 10 minutes.
+
+```json
+{
+  "oclif": {
+    "warn-if-update-available": {
+      "frequency": 10
+    }
+  }
+}
+```
+
+Once every 6 hours.
+
+```json
+{
+  "oclif": {
+    "warn-if-update-available": {
+      "frequency": 6,
+      "frequencyUnit": "hours"
+    }
+  }
+}
+```
+
+Once a day.
+
+```json
+{
+  "oclif": {
+    "warn-if-update-available": {
+      "frequency": 1,
+      "frequencyUnit": "days"
+    }
+  }
+}
+```
+
+Once every 30 seconds.
+
+```json
+{
+  "oclif": {
+    "warn-if-update-available": {
+      "frequency": 30,
+      "frequencyUnit": "seconds"
+    }
+  }
+}
+```
+
 # Environment Variables
 
-`<CLI>_SKIP_UPDATE_CHECK`: Skip this version check
-`<CLI>_FORCE_VERSION_CACHE_UPDATE`: Force the version cache to update
+- `<CLI>_SKIP_NEW_VERSION_CHECK`: Skip this version check
+- `<CLI>_FORCE_VERSION_CACHE_UPDATE`: Force the version cache to update
+- `<CLI>_NEW_VERSION_CHECK_FREQ`: environment variable override for `frequency` setting
+- `<CLI>_NEW_VERSION_CHECK_FREQ_UNIT`: environment variable override for `frequencyUnit` setting
