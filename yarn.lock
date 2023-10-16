@@ -544,10 +544,10 @@
     wordwrap "^1.0.0"
     wrap-ansi "^7.0.0"
 
-"@oclif/core@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.2.1.tgz#94de6b9abdf97b00c95f3790bd60019d184b58af"
-  integrity sha512-QY9csFjADbRa4RH7wcKSvIowaGI+Kc5oFCODYrKy9nj3x/RPGXG9KJ2848+9ZWJKUxv3KPHBX9CULHwvrwpVdg==
+"@oclif/core@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.3.1.tgz#dad236a795da49c20d90b307118bd14c938f28ec"
+  integrity sha512-Pqz+l3bWSkMHpuhHZ/VfzBl7RHYOxLKrTQ0VrbE8N1zEp/NRJxx9BK4pKJkkIHxGs83CXJacUx/6lja03DhsRA==
   dependencies:
     ansi-escapes "^4.3.2"
     ansi-styles "^4.3.0"
