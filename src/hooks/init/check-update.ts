@@ -57,6 +57,8 @@ export function getEnvVarNumber(envVar: string, defaultValue?: number): number |
   return parsed
 }
 
+export function getEnvVarEnum<T extends string>(envVar: string, allowed: T[], defaultValue: T): T
+export function getEnvVarEnum<T extends string>(envVar: string, allowed: T[], defaultValue?: T): T | undefined
 export function getEnvVarEnum<T extends string>(envVar: string, allowed: T[], defaultValue?: T): T | undefined {
   const envVarRaw = process.env[envVar] as T | undefined
   if (!envVarRaw) return defaultValue
@@ -85,9 +87,9 @@ export async function getNewerVersion({
 
   const {frequency, frequencyUnit} = config.pjson.oclif['warn-if-update-available'] ?? {}
 
-  const warningFrequency = getEnvVarNumber('NEW_VERSION_CHECK_FREQ', frequency)
+  const warningFrequency = getEnvVarNumber(config.scopedEnvVarKey('NEW_VERSION_CHECK_FREQ'), frequency)
   const warningFrequencyUnit = getEnvVarEnum(
-    'NEW_VERSION_CHECK_FREQ_UNIT',
+    config.scopedEnvVarKey('NEW_VERSION_CHECK_FREQ_UNIT'),
     ['days', 'hours', 'minutes', 'seconds', 'milliseconds'],
     frequencyUnit ?? 'minutes',
   )
@@ -149,7 +151,7 @@ const hook: Hook<'init'> = async function ({config}) {
         import('lodash.template'),
         // Update the modified time (mtime) of the version file so that we can track the last time we
         // showed the warning. This makes it possible to respect the frequency and frequencyUnit options.
-        await utimes(file, new Date(), new Date()),
+        utimes(file, new Date(), new Date()),
       ])
       this.warn(
         template.default(message)({
@@ -158,6 +160,8 @@ const hook: Hook<'init'> = async function ({config}) {
           latest: newerVersion,
         }),
       )
+
+      // await utimes(file, new Date(), new Date())
     }
   } catch (error: unknown) {
     const {code} = error as {code: string}
