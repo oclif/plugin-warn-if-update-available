@@ -1,3 +1,4 @@
+/* eslint-disable valid-jsdoc */
 import {Hook, Interfaces} from '@oclif/core'
 import chalk from 'chalk'
 import makeDebug from 'debug'
@@ -70,6 +71,15 @@ export function semverGreaterThan(a: string, b: string): boolean {
   return a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'}) > 0
 }
 
+/**
+ * Returns the newest version of the CLI from the cache if it is newer than the current version.
+ *
+ * Returns undefined early if:
+ * - `update` command is being run
+ * - `<CLI>_SKIP_NEW_VERSION_CHECK` is set to true
+ * - the current version is a prerelease
+ * - the warning was last shown to the user within the frequency and frequencyUnit
+ */
 export async function getNewerVersion({
   argv,
   config,
@@ -160,8 +170,6 @@ const hook: Hook<'init'> = async function ({config}) {
           latest: newerVersion,
         }),
       )
-
-      // await utimes(file, new Date(), new Date())
     }
   } catch (error: unknown) {
     const {code} = error as {code: string}
