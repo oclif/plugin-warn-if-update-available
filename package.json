@@ -9,8 +9,7 @@
     "chalk": "^5.3.0",
     "debug": "^4.1.0",
     "http-call": "^5.2.2",
-    "lodash.template": "^4.5.0",
-    "semver": "^7.5.4"
+    "lodash.template": "^4.5.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.7.0",
@@ -34,6 +33,7 @@
     "mocha": "^10.2.0",
     "oclif": "^4.0.2",
     "prettier": "^3.0.3",
+    "sinon": "^16.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
