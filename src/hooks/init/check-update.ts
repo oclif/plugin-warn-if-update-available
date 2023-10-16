@@ -94,7 +94,6 @@ export async function getNewerVersion({
 
   const tag = config.scopedEnvVar('NEW_VERSION_CHECK_TAG') ?? 'latest'
   const {contents: distTags, stat} = await readJSON<{[tag: string]: string}>(file)
-  console.log(stat)
   // If the file was modified before the timeout, don't show the warning
   if (
     warningFrequency &&
