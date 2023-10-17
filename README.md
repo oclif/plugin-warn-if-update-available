@@ -13,8 +13,6 @@ warns if there is a newer version of CLI released
 - [How it works](#how-it-works)
 - [Installation](#installation)
 - [Configuration](#configuration)
-  - [Example configuration](#example-configuration)
-  - [Notification Frequency](#notification-frequency)
 - [Environment Variables](#environment-variables)
 <!-- tocstop -->
 
