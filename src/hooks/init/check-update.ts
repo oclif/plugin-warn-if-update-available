@@ -3,14 +3,12 @@ import {Hook, Interfaces} from '@oclif/core'
 import chalk from 'chalk'
 import makeDebug from 'debug'
 import {spawn} from 'node:child_process'
-import {Stats} from 'node:fs'
-import {stat as fsStat, readFile, utimes} from 'node:fs/promises'
+import {readFile, stat, writeFile} from 'node:fs/promises'
 import {dirname, join, resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
 
-async function readJSON<T>(file: string): Promise<{contents: T; stat: Stats}> {
-  const [contents, stat] = await Promise.all([readFile(file, 'utf8'), fsStat(file)])
-  return {contents: JSON.parse(contents), stat}
+async function readJSON<T>(file: string): Promise<T> {
+  return JSON.parse(await readFile(file, 'utf8')) as T
 }
 
 export function hasNotBeenMsSinceDate(ms: number, now: Date, date: Date): boolean {
@@ -83,11 +81,13 @@ export function semverGreaterThan(a: string, b: string): boolean {
 export async function getNewerVersion({
   argv,
   config,
-  file,
+  lastWarningFile,
+  versionFile,
 }: {
   argv: string[]
   config: Interfaces.Config
-  file: string
+  lastWarningFile: string
+  versionFile: string
 }): Promise<string | undefined> {
   // do not show warning if running `update` command of <CLI>_SKIP_NEW_VERSION_CHECK=true
   if (argv[2] === 'update' || config.scopedEnvVarTrue('SKIP_NEW_VERSION_CHECK')) return
@@ -104,23 +104,30 @@ export async function getNewerVersion({
     frequencyUnit ?? 'minutes',
   )
 
-  const tag = config.scopedEnvVar('NEW_VERSION_CHECK_TAG') ?? 'latest'
-  const {contents: distTags, stat} = await readJSON<{[tag: string]: string}>(file)
-  // If the file was modified before the timeout, don't show the warning
-  if (
-    warningFrequency &&
-    warningFrequencyUnit &&
-    hasNotBeenMsSinceDate(convertToMs(warningFrequency, warningFrequencyUnit), new Date(), stat.mtime)
-  )
-    return
+  try {
+    const {mtime} = await stat(lastWarningFile)
+    // If the file was modified before the timeout, don't show the warning
+    if (
+      warningFrequency &&
+      warningFrequencyUnit &&
+      hasNotBeenMsSinceDate(convertToMs(warningFrequency, warningFrequencyUnit), new Date(), mtime)
+    )
+      return
+  } catch {
+    // The last-warning file doesn't exist, which is okay since it will be created the first time the warning is shown
+  }
 
+  const distTags = await readJSON<{[tag: string]: string}>(versionFile)
+
+  const tag = config.scopedEnvVar('NEW_VERSION_CHECK_TAG') ?? 'latest'
   if (distTags[tag] && semverGreaterThan(distTags[tag].split('-')[0], config.version.split('-')[0]))
     return distTags[tag]
 }
 
 const hook: Hook<'init'> = async function ({config}) {
   const debug = makeDebug('update-check')
-  const file = join(config.cacheDir, 'version')
+  const versionFile = join(config.cacheDir, 'version')
+  const lastWarningFile = join(config.cacheDir, 'last-warning')
 
   // Destructure package.json configuration with defaults
   const {
@@ -134,7 +141,7 @@ const hook: Hook<'init'> = async function ({config}) {
     if (this.config.scopedEnvVarTrue('FORCE_VERSION_CACHE_UPDATE')) return true
     if (this.config.scopedEnvVarTrue('SKIP_NEW_VERSION_CHECK')) return false
     try {
-      const {mtime} = await fsStat(file)
+      const {mtime} = await stat(versionFile)
       const staleAt = new Date(mtime.valueOf() + 1000 * 60 * 60 * 24 * timeoutInDays)
       return staleAt < new Date()
     } catch (error) {
@@ -146,22 +153,22 @@ const hook: Hook<'init'> = async function ({config}) {
   const spawnRefresh = async () => {
     const versionScript = resolve(dirname(fileURLToPath(import.meta.url)), '../../../lib/get-version')
     debug('spawning version refresh')
-    debug(process.execPath, versionScript, config.name, file, config.version, registry, authorization)
-    spawn(process.execPath, [versionScript, config.name, file, config.version, registry, authorization], {
+    debug(process.execPath, versionScript, config.name, versionFile, config.version, registry, authorization)
+    spawn(process.execPath, [versionScript, config.name, versionFile, config.version, registry, authorization], {
       detached: !config.windows,
       stdio: 'ignore',
     }).unref()
   }
 
   try {
-    const newerVersion = await getNewerVersion({argv: process.argv, config, file})
+    const newerVersion = await getNewerVersion({argv: process.argv, config, lastWarningFile, versionFile})
     if (newerVersion) {
       // Default message if the user doesn't provide one
       const [template] = await Promise.all([
         import('lodash.template'),
-        // Update the modified time (mtime) of the version file so that we can track the last time we
+        // Update the modified time (mtime) of the last-warning file so that we can track the last time we
         // showed the warning. This makes it possible to respect the frequency and frequencyUnit options.
-        utimes(file, new Date(), new Date()),
+        writeFile(lastWarningFile, ''),
       ])
       this.warn(
         template.default(message)({

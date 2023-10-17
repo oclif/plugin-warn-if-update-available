@@ -113,7 +113,8 @@ describe('getEnvVarEnum', () => {
 describe('getNewerVersion', () => {
   let config: Config
   let sandbox: SinonSandbox
-  const file = join('fake', 'cache', 'version')
+  const versionFile = join('fake', 'cache', 'version')
+  const lastWarningFile = join('fake', 'cache', 'last-warning')
 
   beforeEach(async () => {
     config = await Config.load(process.cwd())
@@ -125,17 +126,18 @@ describe('getNewerVersion', () => {
   })
 
   it('should return undefined if argv[2] is "update"', async () => {
-    expect(await getNewerVersion({argv: ['node', 'cli.js', 'update'], config, file})).to.be.undefined
+    expect(await getNewerVersion({argv: ['node', 'cli.js', 'update'], config, lastWarningFile, versionFile})).to.be
+      .undefined
   })
 
   it('should return undefined if env var is set to true', async () => {
     sandbox.stub(config, 'scopedEnvVarTrue').returns(true)
-    expect(await getNewerVersion({argv: ['node', 'cli.js'], config, file})).to.be.undefined
+    expect(await getNewerVersion({argv: ['node', 'cli.js'], config, lastWarningFile, versionFile})).to.be.undefined
   })
 
   it('should return undefined if version is a prerelease (contains a "-")', async () => {
     sandbox.stub(config, 'version').value('1.0.0-beta.0')
-    expect(await getNewerVersion({argv: ['node', 'cli.js'], config, file})).to.be.undefined
+    expect(await getNewerVersion({argv: ['node', 'cli.js'], config, lastWarningFile, versionFile})).to.be.undefined
   })
 })
 
