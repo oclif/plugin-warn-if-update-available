@@ -1,7 +1,7 @@
 {
   "name": "@oclif/plugin-warn-if-update-available",
   "description": "warns if there is a newer version of CLI released",
-  "version": "2.1.2-qa.0",
+  "version": "2.1.2-qa.1",
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
