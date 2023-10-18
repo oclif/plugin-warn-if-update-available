@@ -1,3 +1,9 @@
+## [3.0.2](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.1...3.0.2) (2023-10-18)
+
+### Bug Fixes
+
+- **deps:** bump semver from 5.7.1 to 5.7.2 ([#439](https://github.com/oclif/plugin-warn-if-update-available/issues/439)) ([8db9a58](https://github.com/oclif/plugin-warn-if-update-available/commit/8db9a58a14900687c43cd569dc90c9581c6cde5f))
+
 ## [3.0.1](https://github.com/oclif/plugin-warn-if-update-available/compare/2.1.1...3.0.1) (2023-10-17)
 
 ### Bug Fixes
