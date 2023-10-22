@@ -2293,10 +2293,10 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
-eslint-config-oclif-typescript@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/eslint-config-oclif-typescript/-/eslint-config-oclif-typescript-3.0.5.tgz#a7187067e43e52994ec13113cbae4f9c081287b5"
-  integrity sha512-W/Z6UZz5XxfPxvisW/8WiXqz4HIvHZnzp498Qjg/z2o33e75tq/c6alhZ3aK3iCA63EkIKDFsWg/i2TlfZ/UgA==
+eslint-config-oclif-typescript@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/eslint-config-oclif-typescript/-/eslint-config-oclif-typescript-3.0.6.tgz#9350b8dc64d748efc7a86252278b1b447f5a91c5"
+  integrity sha512-MRwR1y7whrJbie3AO0vi8V9nj9De/umRuRy37Dj6cZbYPVqscgOH+qt9FjgrZVIBphqhyflxziR9cLA2WKjMyw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^6.7.5"
     "@typescript-eslint/parser" "^6.7.5"
@@ -2305,7 +2305,7 @@ eslint-config-oclif-typescript@^3.0.5:
     eslint-plugin-import "^2.28.1"
     eslint-plugin-mocha "^10.2.0"
     eslint-plugin-node "^11.1.0"
-    eslint-plugin-perfectionist "^2.1.0"
+    eslint-plugin-perfectionist "^2.2.0"
 
 eslint-config-oclif@^5.0.0:
   version "5.0.0"
@@ -2416,7 +2416,7 @@ eslint-plugin-node@^11.1.0:
     resolve "^1.10.1"
     semver "^6.1.0"
 
-eslint-plugin-perfectionist@^2.1.0:
+eslint-plugin-perfectionist@^2.1.0, eslint-plugin-perfectionist@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-perfectionist/-/eslint-plugin-perfectionist-2.2.0.tgz#a1b1f1407ce9bc20a4f0e2b8113fb84e5b9dfb9f"
   integrity sha512-/nG2Uurd6AY7CI6zlgjHPOoiPY8B7EYMUWdNb5w+EzyauYiQjjD5lQwAI1FlkBbCCFFZw/CdZIPQhXumYoiyaw==
