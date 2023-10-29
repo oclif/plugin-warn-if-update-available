@@ -16,7 +16,7 @@
     "@oclif/prettier-config": "^0.2.1",
     "@oclif/test": "^3.0.2",
     "@types/chai": "^4.3.8",
-    "@types/debug": "^4.1.9",
+    "@types/debug": "^4.1.10",
     "@types/lodash.template": "^4.5.1",
     "@types/mocha": "^10.0.3",
     "@types/node": "^18",
