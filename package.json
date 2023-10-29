@@ -12,7 +12,7 @@
     "lodash.template": "^4.5.0"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/config-conventional": "^17.8.1",
     "@oclif/prettier-config": "^0.2.1",
     "@oclif/test": "^3.0.2",
     "@types/chai": "^4.3.8",
