@@ -803,10 +803,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/lodash.template@^4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@types/lodash.template/-/lodash.template-4.5.1.tgz#3a2325e02963ca8aced4a657598ac26816340d83"
-  integrity sha512-0y71S2dGgmwdkSsyW95JBp8HSZchgKCsjr6F0lsT3eSMtaT3Nn9rcMHU1U4UKu6XjQT3YC6/PNwgFI7k9f+ltw==
+"@types/lodash.template@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@types/lodash.template/-/lodash.template-4.5.3.tgz#1174483eaa761a76a9d68c4adbee4c4e2742f329"
+  integrity sha512-Mo0UYKLu1oXgkV9TVoXZLlXXjyIXlW7ZQRxi/4gQJmzJr63dmicE8gG0OkPjYTKBrBic852q0JzqrtNUWLBIyA==
   dependencies:
     "@types/lodash" "*"
 
