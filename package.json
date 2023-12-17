@@ -23,7 +23,7 @@
     "@types/semver": "^7.5.6",
     "chai": "^4.3.10",
     "commitlint": "^17.8.1",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "eslint-config-oclif": "^5.0.0",
     "eslint-config-oclif-typescript": "^3.0.28",
     "eslint-config-prettier": "^9.1.0",
