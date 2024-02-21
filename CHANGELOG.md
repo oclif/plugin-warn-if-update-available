@@ -1,3 +1,9 @@
+## [3.0.12](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.11...3.0.12) (2024-02-21)
+
+### Bug Fixes
+
+- **deps:** bump ip from 2.0.0 to 2.0.1 ([#531](https://github.com/oclif/plugin-warn-if-update-available/issues/531)) ([e4c57cd](https://github.com/oclif/plugin-warn-if-update-available/commit/e4c57cdf35879d930466ec88ab62808c110fa02b))
+
 ## [3.0.11](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.10...3.0.11) (2024-02-18)
 
 ### Bug Fixes
