@@ -1,3 +1,9 @@
+## [3.0.13](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.12...3.0.13) (2024-03-06)
+
+### Bug Fixes
+
+- publish npm-shrinkwrap.json ([59a550d](https://github.com/oclif/plugin-warn-if-update-available/commit/59a550d09abaa5149ce6d645dd24c392d1fab2a7))
+
 ## [3.0.12](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.11...3.0.12) (2024-02-21)
 
 ### Bug Fixes
