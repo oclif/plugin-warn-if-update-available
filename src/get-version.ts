@@ -19,7 +19,8 @@ async function run([name, file, version, registry, authorization]: string[]) {
   await writeFile(file, JSON.stringify({current: version, headers})) // touch file with current version to prevent multiple updates
   const {body} = await HTTP.get<{'dist-tags': string[]}>(url, {headers, timeout: 5000})
   await writeFile(file, JSON.stringify({...body['dist-tags'], authorization, current: version}))
-  process.exit(0) // eslint-disable-line unicorn/no-process-exit, no-process-exit
+  // eslint-disable-next-line n/no-process-exit, unicorn/no-process-exit
+  process.exit(0)
 }
 
 await run(process.argv.slice(2)).catch(async (error) => {
