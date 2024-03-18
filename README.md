@@ -13,7 +13,10 @@ warns if there is a newer version of CLI released
 - [How it works](#how-it-works)
 - [Installation](#installation)
 - [Configuration](#configuration)
+  - [Example configuration](#example-configuration)
+  - [Notification Frequency](#notification-frequency)
 - [Environment Variables](#environment-variables)
+- [Contributing](#contributing)
 <!-- tocstop -->
 
 # What is this?
@@ -132,3 +135,7 @@ Once every 30 seconds.
 - `<CLI>_FORCE_VERSION_CACHE_UPDATE`: Force the version cache to update
 - `<CLI>_NEW_VERSION_CHECK_FREQ`: environment variable override for `frequency` setting
 - `<CLI>_NEW_VERSION_CHECK_FREQ_UNIT`: environment variable override for `frequencyUnit` setting
+
+# Contributing
+
+See [contributing guide](./CONRTIBUTING.md)
