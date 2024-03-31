@@ -941,12 +941,31 @@
     strip-ansi "^6.0.1"
     wrap-ansi "^6.2.0"
 
-"@inquirer/input@^2.0.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@inquirer/input/-/input-2.1.0.tgz#5ff7028245acd9fa9a25e8a04d71611f76bd82ba"
-  integrity sha512-o57pST+xxZfGww1h4G7ISiX37KlLcajhKgKGG7/h8J6ClWtsyqwMv1el9Ds/4geuYN/HcPj0MyX9gTEO62UpcA==
+"@inquirer/core@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@inquirer/core/-/core-7.1.1.tgz#9339095720c00cfd1f85943977ae15d2f66f336a"
+  integrity sha512-rD1UI3eARN9qJBcLRXPOaZu++Bg+xsk0Tuz1EUOXEW+UbYif1sGjr0Tw7lKejHzKD9IbXE1CEtZ+xR/DrNlQGQ==
   dependencies:
-    "@inquirer/core" "^7.1.0"
+    "@inquirer/type" "^1.2.1"
+    "@types/mute-stream" "^0.0.4"
+    "@types/node" "^20.11.30"
+    "@types/wrap-ansi" "^3.0.0"
+    ansi-escapes "^4.3.2"
+    chalk "^4.1.2"
+    cli-spinners "^2.9.2"
+    cli-width "^4.1.0"
+    figures "^3.2.0"
+    mute-stream "^1.0.0"
+    signal-exit "^4.1.0"
+    strip-ansi "^6.0.1"
+    wrap-ansi "^6.2.0"
+
+"@inquirer/input@^2.1.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@inquirer/input/-/input-2.1.1.tgz#a293a1d1bef103a1f4176d5b41df6d3272b7b48f"
+  integrity sha512-Ag5PDh3/V3B68WGD/5LKXDqbdWKlF7zyfPAlstzu0NoZcZGBbZFjfgXlZIcb6Gs+AfdSi7wNf7soVAaMGH7moQ==
+  dependencies:
+    "@inquirer/core" "^7.1.1"
     "@inquirer/type" "^1.2.1"
 
 "@inquirer/select@^2.0.0":
@@ -1009,7 +1028,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@oclif/core@^3.19.2", "@oclif/core@^3.21.0", "@oclif/core@^3.23.0", "@oclif/core@^3.25.2", "@oclif/core@^3.26.0":
+"@oclif/core@^3.21.0", "@oclif/core@^3.23.0", "@oclif/core@^3.25.2", "@oclif/core@^3.26.0":
   version "3.26.0"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-3.26.0.tgz#959d5e9f13f4ad6a4e98235ad125189df9ee4279"
   integrity sha512-TpMdfD4tfA2tVVbd4l0PrP02o5KoUXYmudBbTC7CeguDo/GLoprw4uL8cMsaVA26+cbcy7WYtOEydQiHVtJixA==
@@ -1059,12 +1078,12 @@
     chalk "^5.3.0"
     fast-levenshtein "^3.0.0"
 
-"@oclif/plugin-warn-if-update-available@^3.0.12":
-  version "3.0.12"
-  resolved "https://registry.yarnpkg.com/@oclif/plugin-warn-if-update-available/-/plugin-warn-if-update-available-3.0.12.tgz#0802e402a74e72da1acd52e1bc9a34bd7999ed17"
-  integrity sha512-BPj+1dSgp9Xtd5BZjLF9s0PeYBl07GSF69aol6/ZUMJMWD78SUWgAAm2SMJJBXic7Lw8hIGBY/YSGXDGaMh4gw==
+"@oclif/plugin-warn-if-update-available@^3.0.14":
+  version "3.0.15"
+  resolved "https://registry.yarnpkg.com/@oclif/plugin-warn-if-update-available/-/plugin-warn-if-update-available-3.0.15.tgz#533e5914c9efc46a1539b5a5e931dbf3c32ffb52"
+  integrity sha512-JtPTJFjL6izMCe5dDS2ix2PyWAD2DeJ5Atzd2HHRifbPcmOxaUE62FKTnarIwfPHLMF/nN33liwo9InAdirozg==
   dependencies:
-    "@oclif/core" "^3.19.2"
+    "@oclif/core" "^3.26.0"
     chalk "^5.3.0"
     debug "^4.1.0"
     http-call "^5.2.2"
@@ -1702,6 +1721,13 @@
   version "18.19.26"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.26.tgz#18991279d0a0e53675285e8cf4a0823766349729"
   integrity sha512-+wiMJsIwLOYCvUqSdKTrfkS8mpTp+MPINe6+Np4TAGFWWRWiBQ5kSq9nZGCSPkzx9mvT+uEukzpX4MOSCydcvw==
+  dependencies:
+    undici-types "~5.26.4"
+
+"@types/node@^20.11.30":
+  version "20.12.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.2.tgz#9facdd11102f38b21b4ebedd9d7999663343d72e"
+  integrity sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==
   dependencies:
     undici-types "~5.26.4"
 
@@ -4570,20 +4596,20 @@ object.values@^1.1.7:
     define-properties "^1.2.0"
     es-abstract "^1.22.1"
 
-oclif@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/oclif/-/oclif-4.6.1.tgz#1808ae01e1f80acb98710b540bef9f81b2cbc8b0"
-  integrity sha512-PImUoF6NiWVjaZ1GHeqD6aUUsWLot/7wey1WxOzei/dn4lK1nGH3/UXRSAGG6OciSlzuwNClPKfqNwKAVPm3OQ==
+oclif@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/oclif/-/oclif-4.7.1.tgz#377f7babdee62b428fca0c6c6015663b7cf91eee"
+  integrity sha512-6GGtbKISjlyxH6QK9jVw0nYf0uaHg26L+B+ke7gJEqjVQ6O23D6Eu/O7xxvt+Tj7/6Hnt0AVNL/vy7tBJ4W37w==
   dependencies:
     "@aws-sdk/client-cloudfront" "^3.535.0"
     "@aws-sdk/client-s3" "^3.535.0"
     "@inquirer/confirm" "^3.0.0"
-    "@inquirer/input" "^2.0.0"
+    "@inquirer/input" "^2.1.0"
     "@inquirer/select" "^2.0.0"
     "@oclif/core" "^3.21.0"
     "@oclif/plugin-help" "^6.0.18"
     "@oclif/plugin-not-found" "^3.0.14"
-    "@oclif/plugin-warn-if-update-available" "^3.0.12"
+    "@oclif/plugin-warn-if-update-available" "^3.0.14"
     async-retry "^1.3.3"
     chalk "^4"
     change-case "^4"
