@@ -5,6 +5,6 @@
 /node_modules
 /tmp
 
-oclif.lock
+
 oclif.manifest.json
 npm-shrinkwrap.json
