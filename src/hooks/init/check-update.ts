@@ -133,7 +133,7 @@ const hook: Hook.Init = async function ({config}) {
   const {
     authorization = '',
     message = '<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.',
-    registry = this.config.npmRegistry ?? 'https://registry.npmjs.org',
+    registry = config.npmRegistry ?? 'https://registry.npmjs.org',
     timeoutInDays = 60,
   } = config.pjson.oclif['warn-if-update-available'] ?? {}
 
