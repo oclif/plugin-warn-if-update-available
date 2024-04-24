@@ -1,3 +1,9 @@
+## [3.0.16](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.15...3.0.16) (2024-04-24)
+
+### Bug Fixes
+
+- default npm registry to config.npmRegistry ([#588](https://github.com/oclif/plugin-warn-if-update-available/issues/588)) ([749f1ba](https://github.com/oclif/plugin-warn-if-update-available/commit/749f1ba5cf0852893644a6587b3e0a3b6f26fcda))
+
 ## [3.0.15](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.14...3.0.15) (2024-03-24)
 
 ### Bug Fixes
