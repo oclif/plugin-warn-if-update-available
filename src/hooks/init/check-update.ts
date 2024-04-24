@@ -124,7 +124,7 @@ export async function getNewerVersion({
     return distTags[tag]
 }
 
-const hook: Hook<'init'> = async function ({config}) {
+const hook: Hook.Init = async function ({config}) {
   const debug = makeDebug('update-check')
   const versionFile = join(config.cacheDir, 'version')
   const lastWarningFile = join(config.cacheDir, 'last-warning')
@@ -133,7 +133,7 @@ const hook: Hook<'init'> = async function ({config}) {
   const {
     authorization = '',
     message = '<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.',
-    registry = 'https://registry.npmjs.org',
+    registry = config.npmRegistry ?? 'https://registry.npmjs.org',
     timeoutInDays = 60,
   } = config.pjson.oclif['warn-if-update-available'] ?? {}
 
