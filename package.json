@@ -9,7 +9,7 @@
     "chalk": "^5.3.0",
     "debug": "^4.1.0",
     "http-call": "^5.2.2",
-    "lodash.template": "^4.5.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^18",
