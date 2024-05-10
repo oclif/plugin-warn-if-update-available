@@ -1,7 +1,7 @@
 {
   "name": "@oclif/plugin-warn-if-update-available",
   "description": "warns if there is a newer version of CLI released",
-  "version": "3.0.17",
+  "version": "3.0.18",
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
@@ -28,7 +28,7 @@
     "husky": "^9",
     "lint-staged": "^15",
     "mocha": "^10.4.0",
-    "oclif": "^4.10.2",
+    "oclif": "^4.10.6",
     "prettier": "^3.2.5",
     "shx": "^0.3.3",
     "sinon": "^16.1.3",
