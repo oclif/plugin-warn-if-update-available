@@ -1,3 +1,9 @@
+## [3.0.17](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.16...3.0.17) (2024-05-08)
+
+### Bug Fixes
+
+- use lodash instead of lodash.template ([d63276f](https://github.com/oclif/plugin-warn-if-update-available/commit/d63276fbcf2314e63cb29917667f1b46b280f742))
+
 ## [3.0.16](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.15...3.0.16) (2024-04-24)
 
 ### Bug Fixes

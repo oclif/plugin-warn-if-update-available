@@ -164,14 +164,14 @@ const hook: Hook.Init = async function ({config}) {
     const newerVersion = await getNewerVersion({argv: process.argv, config, lastWarningFile, versionFile})
     if (newerVersion) {
       // Default message if the user doesn't provide one
-      const [template] = await Promise.all([
-        import('lodash.template'),
+      const [lodash] = await Promise.all([
+        import('lodash'),
         // Update the modified time (mtime) of the last-warning file so that we can track the last time we
         // showed the warning. This makes it possible to respect the frequency and frequencyUnit options.
         writeFile(lastWarningFile, ''),
       ])
       this.warn(
-        template.default(message)({
+        lodash.template(message)({
           chalk,
           config,
           latest: newerVersion,
