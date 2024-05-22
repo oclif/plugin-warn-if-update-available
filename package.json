@@ -12,15 +12,16 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^18",
+    "@commitlint/config-conventional": "^19",
     "@oclif/prettier-config": "^0.2.1",
-    "@oclif/test": "^3.2.15",
     "@types/chai": "^4.3.11",
     "@types/debug": "^4.1.12",
+    "@types/lodash": "^4.17.4",
     "@types/mocha": "^10.0.6",
     "@types/node": "^18",
+    "@types/sinon": "^17.0.3",
     "chai": "^4.4.0",
-    "commitlint": "^18",
+    "commitlint": "^19",
     "eslint": "^8.57.0",
     "eslint-config-oclif": "^5.2.0",
     "eslint-config-oclif-typescript": "^3.1.7",
@@ -31,7 +32,7 @@
     "oclif": "^4.10.11",
     "prettier": "^3.2.5",
     "shx": "^0.3.3",
-    "sinon": "^16.1.3",
+    "sinon": "^18.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },

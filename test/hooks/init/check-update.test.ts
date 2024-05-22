@@ -1,7 +1,7 @@
 import {Config} from '@oclif/core'
 import {expect} from 'chai'
 import {join} from 'node:path'
-import {SinonSandbox, createSandbox} from 'sinon'
+import sinon from 'sinon'
 
 import {
   convertToMs,
@@ -112,17 +112,15 @@ describe('getEnvVarEnum', () => {
 
 describe('getNewerVersion', () => {
   let config: Config
-  let sandbox: SinonSandbox
   const versionFile = join('fake', 'cache', 'version')
   const lastWarningFile = join('fake', 'cache', 'last-warning')
 
   beforeEach(async () => {
     config = await Config.load(process.cwd())
-    sandbox = createSandbox()
   })
 
   afterEach(() => {
-    sandbox.restore()
+    sinon.restore()
   })
 
   it('should return undefined if argv[2] is "update"', async () => {
@@ -131,12 +129,12 @@ describe('getNewerVersion', () => {
   })
 
   it('should return undefined if env var is set to true', async () => {
-    sandbox.stub(config, 'scopedEnvVarTrue').returns(true)
+    sinon.stub(config, 'scopedEnvVarTrue').returns(true)
     expect(await getNewerVersion({argv: ['node', 'cli.js'], config, lastWarningFile, versionFile})).to.be.undefined
   })
 
   it('should return undefined if version is a prerelease (contains a "-")', async () => {
-    sandbox.stub(config, 'version').value('1.0.0-beta.0')
+    sinon.stub(config, 'version').value('1.0.0-beta.0')
     expect(await getNewerVersion({argv: ['node', 'cli.js'], config, lastWarningFile, versionFile})).to.be.undefined
   })
 })
