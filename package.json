@@ -5,8 +5,8 @@
   "author": "Salesforce",
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
-    "@oclif/core": "^3.26.6",
-    "chalk": "^5.3.0",
+    "@oclif/core": "^4.0.0-beat.13",
+    "ansis": "^3.2.0",
     "debug": "^4.1.0",
     "http-call": "^5.2.2",
     "lodash": "^4.17.21"
