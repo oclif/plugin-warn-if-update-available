@@ -1,11 +1,13 @@
 /* eslint-disable valid-jsdoc */
 import {Hook, Interfaces} from '@oclif/core'
-import chalk from 'chalk'
+import {Ansis} from 'ansis'
 import makeDebug from 'debug'
 import {spawn} from 'node:child_process'
 import {readFile, stat, writeFile} from 'node:fs/promises'
 import {dirname, join, resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
+
+const ansis = new Ansis()
 
 async function readJSON<T>(file: string): Promise<T> {
   return JSON.parse(await readFile(file, 'utf8')) as T
@@ -172,7 +174,9 @@ const hook: Hook.Init = async function ({config}) {
       ])
       this.warn(
         lodash.template(message)({
-          chalk,
+          ansis,
+          // chalk and ansis have the same api. Keeping chalk for backwards compatibility.
+          chalk: ansis,
           config,
           latest: newerVersion,
         }),
