@@ -171,7 +171,7 @@ const hook: Hook.Init = async function ({config}) {
         writeFile(lastWarningFile, ''),
       ])
       this.warn(
-        lodash.template(message)({
+        lodash.default.template(message)({
           chalk,
           config,
           latest: newerVersion,
