@@ -1,3 +1,9 @@
+# [3.1.0](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.19...3.1.0) (2024-05-31)
+
+### Features
+
+- use @oclif/core v4 ([2465305](https://github.com/oclif/plugin-warn-if-update-available/commit/246530514459059f8079cb26d84c7a5226a0586c))
+
 ## [3.0.19](https://github.com/oclif/plugin-warn-if-update-available/compare/3.0.18...3.0.19) (2024-05-12)
 
 ### Bug Fixes
