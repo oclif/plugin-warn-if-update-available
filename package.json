@@ -7,7 +7,7 @@
   "dependencies": {
     "@oclif/core": "^4.0.0-beat.13",
     "ansis": "^3.2.0",
-    "debug": "^4.1.0",
+    "debug": "^4.3.5",
     "http-call": "^5.2.2",
     "lodash": "^4.17.21"
   },
