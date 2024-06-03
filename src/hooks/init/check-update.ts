@@ -173,7 +173,7 @@ const hook: Hook.Init = async function ({config}) {
         writeFile(lastWarningFile, ''),
       ])
       this.warn(
-        lodash.template(message)({
+        lodash.default.template(message)({
           ansis,
           // chalk and ansis have the same api. Keeping chalk for backwards compatibility.
           chalk: ansis,
