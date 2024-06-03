@@ -1,3 +1,9 @@
+## [3.1.2](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.1...3.1.2) (2024-06-03)
+
+### Bug Fixes
+
+- lodash import ([#613](https://github.com/oclif/plugin-warn-if-update-available/issues/613)) ([acbbd10](https://github.com/oclif/plugin-warn-if-update-available/commit/acbbd10762454bee7ce2e3c0b77178af69a12d04))
+
 ## [3.1.1](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.0...3.1.1) (2024-06-02)
 
 ### Bug Fixes
