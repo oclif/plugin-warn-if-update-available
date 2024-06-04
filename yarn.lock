@@ -1380,6 +1380,29 @@
     wordwrap "^1.0.0"
     wrap-ansi "^7.0.0"
 
+"@oclif/core@^4":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.0.0.tgz#c47783c9803cb440e3fd325157437400765eae3f"
+  integrity sha512-BMWGvJrzn5PnG60gTNFEvaBT0jvGNiJCKN4aJBYP6E7Bq/Y5XPnxPrkj7ZZs/Jsd1oVn6K/JRmF6gWpv72DOew==
+  dependencies:
+    ansi-escapes "^4.3.2"
+    ansis "^3.1.1"
+    clean-stack "^3.0.1"
+    cli-spinners "^2.9.2"
+    cosmiconfig "^9.0.0"
+    debug "^4.3.5"
+    ejs "^3.1.10"
+    get-package-type "^0.1.0"
+    globby "^11.1.0"
+    indent-string "^4.0.0"
+    is-wsl "^2.2.0"
+    minimatch "^9.0.4"
+    string-width "^4.2.3"
+    supports-color "^8"
+    widest-line "^3.1.0"
+    wordwrap "^1.0.0"
+    wrap-ansi "^7.0.0"
+
 "@oclif/core@^4.0.0-beta.12", "@oclif/core@^4.0.0-beta.13":
   version "4.0.0-beta.13"
   resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.0.0-beta.13.tgz#0e0a6431cfe612db77073d2f9ef361f14e4090b8"
@@ -1399,29 +1422,6 @@
     minimatch "^9.0.4"
     string-width "^4.2.3"
     supports-color "^9.4.0"
-    widest-line "^3.1.0"
-    wordwrap "^1.0.0"
-    wrap-ansi "^7.0.0"
-
-"@oclif/core@^4.0.0-beta.14":
-  version "4.0.0-beta.14"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.0.0-beta.14.tgz#2a75c3c4afbac6ce129878285756385ff332f8a2"
-  integrity sha512-q0DTnJzS0TVRFM0Pi685j5S0XnQHJATj3FDS6tR5TIL1tb5PubacJxP7Cg5E/fC2ra6qztPgpL8LZouRy7lAVQ==
-  dependencies:
-    ansi-escapes "^4.3.2"
-    ansis "^3.1.1"
-    clean-stack "^3.0.1"
-    cli-spinners "^2.9.2"
-    cosmiconfig "^9.0.0"
-    debug "^4.3.4"
-    ejs "^3.1.10"
-    get-package-type "^0.1.0"
-    globby "^11.1.0"
-    indent-string "^4.0.0"
-    is-wsl "^2.2.0"
-    minimatch "^9.0.4"
-    string-width "^4.2.3"
-    supports-color "^8"
     widest-line "^3.1.0"
     wordwrap "^1.0.0"
     wrap-ansi "^7.0.0"
