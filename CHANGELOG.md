@@ -1,3 +1,10 @@
+## [3.1.10](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.9...3.1.10) (2024-07-23)
+
+### Bug Fixes
+
+- **deps:** bump ansis from 3.2.1 to 3.3.1 ([#651](https://github.com/oclif/plugin-warn-if-update-available/issues/651)) ([ff322a7](https://github.com/oclif/plugin-warn-if-update-available/commit/ff322a7a1703df23be4e75bd85efc47755b9c46b))
+- husky 9.1.1 fix ([#657](https://github.com/oclif/plugin-warn-if-update-available/issues/657)) ([d41923b](https://github.com/oclif/plugin-warn-if-update-available/commit/d41923b258a6bee94bce32a192da173141af3b93))
+
 ## [3.1.9](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.8...3.1.9) (2024-07-14)
 
 ### Bug Fixes
