@@ -1,3 +1,9 @@
+## [3.1.12](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.11...3.1.12) (2024-08-25)
+
+### Bug Fixes
+
+- **deps:** bump micromatch from 4.0.7 to 4.0.8 ([#684](https://github.com/oclif/plugin-warn-if-update-available/issues/684)) ([133a619](https://github.com/oclif/plugin-warn-if-update-available/commit/133a6190b59787f9e0e036ad47ef418338881773))
+
 ## [3.1.11](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.10...3.1.11) (2024-07-28)
 
 ### Bug Fixes
