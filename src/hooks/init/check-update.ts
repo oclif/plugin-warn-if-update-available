@@ -139,7 +139,7 @@ const hook: Hook.Init = async function ({config}) {
   const {
     message = '<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.',
     registry = config.npmRegistry ?? getRegistryUrl(scope), // Use custom registry or fallback to 1) registry set for the scope, 2) default registry in the npmrc, or 3) the default registry
-    timeoutInDays = 7,
+    timeoutInDays = 60,
   } = config.pjson.oclif['warn-if-update-available'] ?? {}
 
   // Get the authorization header next as we need the registry to be computed first

@@ -25,7 +25,7 @@ This plugin shows a warning message if a user is running an out of date CLI.
 
 # How it works
 
-This checks the version against the npm registry asynchronously in a forked process once every 7 days by default (see [Configuration](#configuration) for how to configure this). It then saves a version file to the cache directory that will enable the warning. The upside of this method is that it won't block a user while they're using your CLI—the downside is that it will only display _after_ running a command that fetches the new version.
+This checks the version against the npm registry asynchronously in a forked process once every 60 days by default (see [Configuration](#configuration) for how to configure this). It then saves a version file to the cache directory that will enable the warning. The upside of this method is that it won't block a user while they're using your CLI—the downside is that it will only display _after_ running a command that fetches the new version.
 
 # Installation
 
