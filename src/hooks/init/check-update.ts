@@ -1,4 +1,5 @@
 /* eslint-disable valid-jsdoc */
+
 import {Hook, Interfaces} from '@oclif/core'
 import {Ansis} from 'ansis'
 import makeDebug from 'debug'
@@ -6,6 +7,8 @@ import {spawn} from 'node:child_process'
 import {readFile, stat, writeFile} from 'node:fs/promises'
 import {dirname, join, resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
+import getAuthToken from 'registry-auth-token';
+import getRegistryUrl from 'registry-auth-token/registry-url.js';
 
 const ansis = new Ansis()
 
@@ -130,14 +133,24 @@ const hook: Hook.Init = async function ({config}) {
   const debug = makeDebug('update-check')
   const versionFile = join(config.cacheDir, 'version')
   const lastWarningFile = join(config.cacheDir, 'last-warning')
+  const scope = config.name.split('/')[0];
 
   // Destructure package.json configuration with defaults
   const {
-    authorization = '',
     message = '<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.',
-    registry = config.npmRegistry ?? 'https://registry.npmjs.org',
-    timeoutInDays = 60,
+    registry = config.npmRegistry ?? getRegistryUrl(scope), // Use custom registry or fallback to 1) registry set for the scope, 2) default registry in the npmrc, or 3) the default registry
+    timeoutInDays = 7,
   } = config.pjson.oclif['warn-if-update-available'] ?? {}
+
+  // Get the authorization header next as we need the registry to be computed first
+  let {
+    authorization
+  } = config.pjson.oclif['warn-if-update-available'] ?? {}
+
+  if (!authorization) {
+    const authToken = getAuthToken(registry);
+    authorization = authToken ? `${authToken.type} ${authToken.token}` : '';
+  }
 
   const refreshNeeded = async () => {
     if (this.config.scopedEnvVarTrue('FORCE_VERSION_CACHE_UPDATE')) return true
@@ -175,7 +188,7 @@ const hook: Hook.Init = async function ({config}) {
       this.warn(
         lodash.default.template(message)({
           ansis,
-          // chalk and ansis have the same api. Keeping chalk for backwards compatibility.
+          // Chalk and ansis have the same api. Keeping chalk for backwards compatibility.
           chalk: ansis,
           config,
           latest: newerVersion,
