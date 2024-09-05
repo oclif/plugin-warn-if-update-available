@@ -1,3 +1,9 @@
+## [3.1.14](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.13...3.1.14) (2024-09-05)
+
+### Bug Fixes
+
+- follow the user's npmrc config by default ([#689](https://github.com/oclif/plugin-warn-if-update-available/issues/689)) ([94be8f5](https://github.com/oclif/plugin-warn-if-update-available/commit/94be8f580af732272b038650fa9105eb42decc08))
+
 ## [3.1.13](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.12...3.1.13) (2024-08-25)
 
 ### Bug Fixes
