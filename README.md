@@ -49,8 +49,8 @@ any of the following configuration properties:
 
 - `timeoutInDays` - Duration between update checks. Defaults to 60.
 - `message` - Customize update message.
-- `registry` - URL of registry. Defaults to the public npm registry: `https://registry.npmjs.org`
-- `authorization` - Authorization header value for registries that require auth.
+- `registry` - URL of registry. Defaults to following your .npmrc configuration
+- `authorization` - Authorization header value for registries that require auth. Defaults to following your .npmrc configuration
 - `frequency` - The frequency that the new version warning should be shown.
 - `frequencyUnit` - The unit of time that should be used to calculate the frequency (`days`, `hours`, `minutes`, `seconds`, `milliseconds`). Defaults to `minutes`.
 
