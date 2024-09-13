@@ -1,3 +1,9 @@
+## [3.1.16](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.15...3.1.16) (2024-09-13)
+
+### Bug Fixes
+
+- **deps:** bump path-to-regexp from 6.2.2 to 6.3.0 ([#696](https://github.com/oclif/plugin-warn-if-update-available/issues/696)) ([7322702](https://github.com/oclif/plugin-warn-if-update-available/commit/7322702a70d79c4b0a02a2ab75d23412b2402432))
+
 ## [3.1.15](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.14...3.1.15) (2024-09-08)
 
 ### Bug Fixes
