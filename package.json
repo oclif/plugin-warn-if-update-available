@@ -18,7 +18,7 @@
     "@types/chai": "^4.3.16",
     "@types/debug": "^4.1.12",
     "@types/lodash": "^4.17.7",
-    "@types/mocha": "^10.0.7",
+    "@types/mocha": "^10.0.8",
     "@types/node": "^18",
     "@types/sinon": "^17.0.3",
     "chai": "^4.5.0",
