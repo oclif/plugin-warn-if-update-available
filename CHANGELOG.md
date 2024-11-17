@@ -1,3 +1,9 @@
+## [3.1.22](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.21...3.1.22) (2024-11-17)
+
+### Bug Fixes
+
+- **deps:** bump cross-spawn from 7.0.3 to 7.0.5 ([#739](https://github.com/oclif/plugin-warn-if-update-available/issues/739)) ([cf7bd9f](https://github.com/oclif/plugin-warn-if-update-available/commit/cf7bd9fd881beb60c1b7886b237ce4a3580eddf2))
+
 ## [3.1.21](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.20...3.1.21) (2024-11-03)
 
 ### Bug Fixes
