@@ -10,7 +10,7 @@
     "debug": "^4.3.5",
     "http-call": "^5.2.2",
     "lodash": "^4.17.21",
-    "registry-auth-token": "^5.0.2"
+    "registry-auth-token": "^5.0.3"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19",
