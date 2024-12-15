@@ -1,3 +1,9 @@
+## [3.1.27](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.26...3.1.27) (2024-12-15)
+
+### Bug Fixes
+
+- **deps:** bump ansis from 3.3.2 to 3.4.0 ([#761](https://github.com/oclif/plugin-warn-if-update-available/issues/761)) ([a3ca174](https://github.com/oclif/plugin-warn-if-update-available/commit/a3ca17438f2fa8f3c249dfcf6a08d8f0e4e5c190))
+
 ## [3.1.26](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.25...3.1.26) (2024-12-08)
 
 ### Bug Fixes
