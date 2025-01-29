@@ -1,5 +1,3 @@
-/* eslint-disable valid-jsdoc */
-
 import {Hook, Interfaces} from '@oclif/core'
 import {Ansis} from 'ansis'
 import makeDebug from 'debug'
@@ -7,8 +5,8 @@ import {spawn} from 'node:child_process'
 import {readFile, stat, writeFile} from 'node:fs/promises'
 import {dirname, join, resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
-import getAuthToken from 'registry-auth-token';
-import getRegistryUrl from 'registry-auth-token/registry-url.js';
+import getAuthToken from 'registry-auth-token'
+import getRegistryUrl from 'registry-auth-token/registry-url.js'
 
 const ansis = new Ansis()
 
@@ -133,7 +131,7 @@ const hook: Hook.Init = async function ({config}) {
   const debug = makeDebug('update-check')
   const versionFile = join(config.cacheDir, 'version')
   const lastWarningFile = join(config.cacheDir, 'last-warning')
-  const scope = config.name.split('/')[0];
+  const scope = config.name.split('/')[0]
 
   // Destructure package.json configuration with defaults
   const {
@@ -143,13 +141,11 @@ const hook: Hook.Init = async function ({config}) {
   } = config.pjson.oclif['warn-if-update-available'] ?? {}
 
   // Get the authorization header next as we need the registry to be computed first
-  let {
-    authorization
-  } = config.pjson.oclif['warn-if-update-available'] ?? {}
+  let {authorization} = config.pjson.oclif['warn-if-update-available'] ?? {}
 
   if (!authorization) {
-    const authToken = getAuthToken(registry);
-    authorization = authToken ? `${authToken.type} ${authToken.token}` : '';
+    const authToken = getAuthToken(registry)
+    authorization = authToken ? `${authToken.type} ${authToken.token}` : ''
   }
 
   const refreshNeeded = async () => {
