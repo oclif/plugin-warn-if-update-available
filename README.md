@@ -133,6 +133,7 @@ Once every 30 seconds.
 - `<CLI>_FORCE_VERSION_CACHE_UPDATE`: Force the version cache to update
 - `<CLI>_NEW_VERSION_CHECK_FREQ`: environment variable override for `frequency` setting
 - `<CLI>_NEW_VERSION_CHECK_FREQ_UNIT`: environment variable override for `frequencyUnit` setting
+- `<CLI>_NEW_VERSION_CHECK_TAG`: [distribution tag](https://docs.npmjs.com/adding-dist-tags-to-packages) to check against (defaults to `latest`)
 
 # Contributing
 
