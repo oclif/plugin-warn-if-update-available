@@ -6,7 +6,7 @@
   "bugs": "https://github.com/oclif/plugin-warn-if-update-available/issues",
   "dependencies": {
     "@oclif/core": "^4",
-    "ansis": "^3.10.0",
+    "ansis": "^3.17.0",
     "debug": "^4.4.0",
     "http-call": "^5.2.2",
     "lodash": "^4.17.21",
