@@ -1134,7 +1134,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@eslint/js@9.26.0", "@eslint/js@^9.25.0":
+"@eslint/js@9.26.0", "@eslint/js@^9.26.0":
   version "9.26.0"
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-9.26.0.tgz#1e13126b67a3db15111d2dcc61f69a2acff70bd5"
   integrity sha512-I9XlJawFdSMvWjDt6wksMCrgns5ggLNfFwFvnShsleWruvXM514Qxk8V246efTw+eo9JABvVz+u3q2RiAowKxQ==
@@ -3671,14 +3671,14 @@ eslint-config-oclif@^5.2.2:
     eslint-plugin-n "^15.1.0"
     eslint-plugin-unicorn "^48.0.1"
 
-eslint-config-oclif@^6.0.51:
-  version "6.0.51"
-  resolved "https://registry.yarnpkg.com/eslint-config-oclif/-/eslint-config-oclif-6.0.51.tgz#8a223a127c54f3732f9580419d002c4b687b8437"
-  integrity sha512-PaZj30nCIBctd3lHx+VvRoU+yXhZtZlXtDD32slY2BEO1W1154KeCaYB5cZdYXZBjoh8mNtbqRVp78ced05q2w==
+eslint-config-oclif@^6.0.54:
+  version "6.0.54"
+  resolved "https://registry.yarnpkg.com/eslint-config-oclif/-/eslint-config-oclif-6.0.54.tgz#7055d3fb91ff56d4c76e80cbd251520e5cdcc853"
+  integrity sha512-5BWFViu6bkpwltEbr+WmHj5UfYdZUc/tF7o0AOpeHJ4KD7e9yPFeizCRFBKxwtlZDaJaqDwr8JpuNZlg7ACWOA==
   dependencies:
     "@eslint/compat" "^1.2.9"
     "@eslint/eslintrc" "^3.3.1"
-    "@eslint/js" "^9.25.0"
+    "@eslint/js" "^9.26.0"
     "@stylistic/eslint-plugin" "^3.1.0"
     "@typescript-eslint/eslint-plugin" "^8"
     "@typescript-eslint/parser" "^8"
