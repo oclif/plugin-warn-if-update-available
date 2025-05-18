@@ -1,3 +1,9 @@
+## [3.1.40](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.39...3.1.40) (2025-05-18)
+
+### Bug Fixes
+
+- **deps:** bump debug from 4.4.0 to 4.4.1 ([#859](https://github.com/oclif/plugin-warn-if-update-available/issues/859)) ([a25deb5](https://github.com/oclif/plugin-warn-if-update-available/commit/a25deb514b84f5c56faa991b291665974695313d))
+
 ## [3.1.39](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.38...3.1.39) (2025-05-04)
 
 ### Bug Fixes
