@@ -7,7 +7,7 @@
   "dependencies": {
     "@oclif/core": "^4",
     "ansis": "^3.17.0",
-    "debug": "^4.4.1",
+    "debug": "^4.4.3",
     "http-call": "^5.2.2",
     "lodash": "^4.17.21",
     "registry-auth-token": "^5.1.0"
