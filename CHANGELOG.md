@@ -1,3 +1,9 @@
+## [3.1.52](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.51...3.1.52) (2025-11-02)
+
+### Bug Fixes
+
+- **deps:** bump @oclif/core from 4.7.2 to 4.8.0 ([#947](https://github.com/oclif/plugin-warn-if-update-available/issues/947)) ([902478d](https://github.com/oclif/plugin-warn-if-update-available/commit/902478dd11786fea461e39061ee6a024a6fa894c))
+
 ## [3.1.51](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.50...3.1.51) (2025-10-26)
 
 ### Bug Fixes
