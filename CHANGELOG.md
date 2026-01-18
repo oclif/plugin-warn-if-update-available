@@ -1,3 +1,9 @@
+## [3.1.54](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.53...3.1.54) (2026-01-18)
+
+### Bug Fixes
+
+- **deps:** bump registry-auth-token from 5.1.0 to 5.1.1 ([#974](https://github.com/oclif/plugin-warn-if-update-available/issues/974)) ([aeb3361](https://github.com/oclif/plugin-warn-if-update-available/commit/aeb3361ac281223db658b4e61ab0cc9fea9bd907))
+
 ## [3.1.53](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.52...3.1.53) (2025-11-15)
 
 ### Bug Fixes
