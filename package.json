@@ -9,7 +9,7 @@
     "ansis": "^3.17.0",
     "debug": "^4.4.3",
     "http-call": "^5.2.2",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "registry-auth-token": "^5.1.1"
   },
   "devDependencies": {
