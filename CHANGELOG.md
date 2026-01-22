@@ -1,3 +1,9 @@
+## [3.1.55](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.54...3.1.55) (2026-01-22)
+
+### Bug Fixes
+
+- **deps:** bump lodash from 4.17.21 to 4.17.23 ([#978](https://github.com/oclif/plugin-warn-if-update-available/issues/978)) ([cab3256](https://github.com/oclif/plugin-warn-if-update-available/commit/cab3256e8222b11de665a3790f8f18b4e54dca69))
+
 ## [3.1.54](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.53...3.1.54) (2026-01-18)
 
 ### Bug Fixes
