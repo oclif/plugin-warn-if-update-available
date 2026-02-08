@@ -3617,10 +3617,10 @@ eslint-config-oclif@^5.2.2:
     eslint-plugin-n "^15.1.0"
     eslint-plugin-unicorn "^48.0.1"
 
-eslint-config-oclif@^6.0.136:
-  version "6.0.136"
-  resolved "https://registry.yarnpkg.com/eslint-config-oclif/-/eslint-config-oclif-6.0.136.tgz#b84d14dbdaa9b9940e8b830c3a64ed24a68ad3b2"
-  integrity sha512-vKBGMN/WqnvD7zmiMsggX8Zaj+L2PT0/ifvXvQAOOdXfX8E3PbthCyF0GEiBnmoJTVw2QmbWpEr4UEYpVmt6mQ==
+eslint-config-oclif@^6.0.137:
+  version "6.0.137"
+  resolved "https://registry.yarnpkg.com/eslint-config-oclif/-/eslint-config-oclif-6.0.137.tgz#677c03c14baae81e0480de0e2c1a7a05b9faf879"
+  integrity sha512-23so0ju6qf+JGDtGUclybUT4JGUSapl2zp+f+JOHCzLFpxJ/4fPCU6KNMZWLPBecdjIertMNRVOmHddt5i83Fg==
   dependencies:
     "@eslint/compat" "^1.4.1"
     "@eslint/eslintrc" "^3.3.3"
@@ -3638,7 +3638,7 @@ eslint-config-oclif@^6.0.136:
     eslint-plugin-n "^17.23.2"
     eslint-plugin-perfectionist "^4"
     eslint-plugin-unicorn "^56.0.1"
-    typescript-eslint "^8.53.1"
+    typescript-eslint "^8.54.0"
 
 eslint-config-prettier@^10.1.8:
   version "10.1.8"
@@ -6979,7 +6979,7 @@ typed-array-length@^1.0.7:
     possible-typed-array-names "^1.0.0"
     reflect.getprototypeof "^1.0.6"
 
-typescript-eslint@^8.53.1:
+typescript-eslint@^8.54.0:
   version "8.54.0"
   resolved "https://registry.yarnpkg.com/typescript-eslint/-/typescript-eslint-8.54.0.tgz#f4ef3b8882a5ddc2a41968e014194c178ab23f6a"
   integrity sha512-CKsJ+g53QpsNPqbzUsfKVgd3Lny4yKZ1pP4qN3jdMOg/sisIDLGyDMezycquXLE5JsEU0wp3dGNdzig0/fmSVQ==
