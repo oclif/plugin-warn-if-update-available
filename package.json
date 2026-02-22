@@ -24,7 +24,7 @@
     "@types/sinon": "^17.0.3",
     "chai": "^4.5.0",
     "commitlint": "^19",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.3",
     "eslint-config-oclif": "^6.0.137",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
