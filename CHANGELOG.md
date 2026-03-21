@@ -1,3 +1,9 @@
+## [3.1.56](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.55...3.1.56) (2026-03-21)
+
+### Bug Fixes
+
+- **deps:** bump flatted from 3.3.2 to 3.4.2 ([#999](https://github.com/oclif/plugin-warn-if-update-available/issues/999)) ([797298d](https://github.com/oclif/plugin-warn-if-update-available/commit/797298d7b399788449ec47db02577987b9d5f65f))
+
 ## [3.1.55](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.54...3.1.55) (2026-01-22)
 
 ### Bug Fixes
