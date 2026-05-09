@@ -1,3 +1,9 @@
+## [3.1.63](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.62...3.1.63) (2026-05-09)
+
+### Bug Fixes
+
+- **deps:** bump fast-xml-builder from 1.1.4 to 1.2.0 ([#1015](https://github.com/oclif/plugin-warn-if-update-available/issues/1015)) ([f49f683](https://github.com/oclif/plugin-warn-if-update-available/commit/f49f68341b21c9c4b8fdfa0ba721f4e1de4d6855))
+
 ## [3.1.62](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.61...3.1.62) (2026-05-03)
 
 ### Bug Fixes
