@@ -1,3 +1,9 @@
+## [3.1.66](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.65...3.1.66) (2026-06-21)
+
+### Bug Fixes
+
+- **deps:** bump js-yaml from 4.1.1 to 4.2.0 ([#1032](https://github.com/oclif/plugin-warn-if-update-available/issues/1032)) ([89e79b1](https://github.com/oclif/plugin-warn-if-update-available/commit/89e79b184636f171dc623f3dd5cff2da026e1391))
+
 ## [3.1.65](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.64...3.1.65) (2026-05-17)
 
 ### Bug Fixes
