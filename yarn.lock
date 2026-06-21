@@ -1196,9 +1196,9 @@
   integrity sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
 
 "@oclif/core@^4", "@oclif/core@^4.11.4":
-  version "4.11.4"
-  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.11.4.tgz#14082760c0b8e677331aeba3f32e6bf75e2556c0"
-  integrity sha512-URwiQ5ALx/sJ2iH4vzXEd+H4K6NAI7LRs6Jag3hrgKEpGmaE6alfRC8qjO4GIgb6A3ACaJumqP9twi/M9ywdHQ==
+  version "4.11.9"
+  resolved "https://registry.yarnpkg.com/@oclif/core/-/core-4.11.9.tgz#7dd438f3e48834b2bb219e71d34d397aacebccab"
+  integrity sha512-w8uupjkdEQQcTFp1BUzWZCRNRW4BwXaSnFldHuziqx79F8q4NRCFwgGoMHV48HpJ6Xn9zeN0l3BiuppnPh6bWA==
   dependencies:
     ansi-escapes "^4.3.2"
     ansis "^3.17.0"
