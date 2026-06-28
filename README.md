@@ -15,6 +15,7 @@ warns if there is a newer version of CLI released
 - [Configuration](#configuration)
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
+
 <!-- tocstop -->
 
 # What is this?
