@@ -1,4 +1,4 @@
-import {Hook, Interfaces} from '@oclif/core'
+import {type Hook, type Interfaces} from '@oclif/core'
 import {Ansis} from 'ansis'
 import makeDebug from 'debug'
 import {spawn} from 'node:child_process'
@@ -120,10 +120,10 @@ export async function getNewerVersion({
     // The last-warning file doesn't exist, which is okay since it will be created the first time the warning is shown
   }
 
-  const distTags = await readJSON<{[tag: string]: string}>(versionFile)
+  const distTags = await readJSON<Record<string, string>>(versionFile)
 
   const tag = config.scopedEnvVar('NEW_VERSION_CHECK_TAG') ?? 'latest'
-  if (distTags[tag] && semverGreaterThan(distTags[tag].split('-')[0], config.version.split('-')[0]))
+  if (distTags[tag] && semverGreaterThan(distTags[tag].split('-', 1)[0], config.version.split('-', 1)[0]))
     return distTags[tag]
 }
 
@@ -131,7 +131,7 @@ const hook: Hook.Init = async function ({config}) {
   const debug = makeDebug('update-check')
   const versionFile = join(config.cacheDir, 'version')
   const lastWarningFile = join(config.cacheDir, 'last-warning')
-  const scope = config.name.split('/')[0]
+  const scope = config.name.split('/', 1)[0]
 
   // Destructure package.json configuration with defaults
   const {

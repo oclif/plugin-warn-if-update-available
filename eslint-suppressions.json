@@ -1,0 +1,51 @@
+{
+  "eslint.config.js": {
+    "import-x/no-anonymous-default-export": {
+      "count": 1
+    }
+  },
+  "src/get-version.ts": {
+    "@typescript-eslint/no-unsafe-argument": {
+      "count": 1
+    },
+    "@typescript-eslint/use-unknown-in-catch-callback-variable": {
+      "count": 1
+    },
+    "require-unicode-regexp": {
+      "count": 1
+    },
+    "unicorn/import-style": {
+      "count": 1
+    }
+  },
+  "src/hooks/init/check-update.ts": {
+    "@typescript-eslint/switch-exhaustiveness-check": {
+      "count": 1
+    },
+    "unicorn/consistent-boolean-name": {
+      "count": 1
+    },
+    "unicorn/import-style": {
+      "count": 1
+    },
+    "unicorn/no-computed-property-existence-check": {
+      "count": 1
+    },
+    "unicorn/prefer-number-coercion": {
+      "count": 1
+    }
+  },
+  "src/index.ts": {
+    "import-x/no-anonymous-default-export": {
+      "count": 1
+    }
+  },
+  "test/hooks/init/check-update.test.ts": {
+    "unicorn/import-style": {
+      "count": 1
+    },
+    "unicorn/max-nested-calls": {
+      "count": 2
+    }
+  }
+}
