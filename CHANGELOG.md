@@ -1,3 +1,9 @@
+# [3.2.0](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.73...3.2.0) (2026-08-24)
+
+### Features
+
+- bumping to eslint v10 (W-23473845) ([e26ab30](https://github.com/oclif/plugin-warn-if-update-available/commit/e26ab3072d09ca71c2ad31437890db77a6e5f3fa))
+
 ## [3.1.73](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.72...3.1.73) (2026-08-09)
 
 ### Bug Fixes
