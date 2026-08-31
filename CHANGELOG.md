@@ -1,3 +1,11 @@
+# [4.0.0](https://github.com/oclif/plugin-warn-if-update-available/compare/3.2.0...4.0.0) (2026-08-31)
+
+- feat!: upgrade oclif/core to v5 @W-23512455@ ([6f728c6](https://github.com/oclif/plugin-warn-if-update-available/commit/6f728c68d2a29b6894aae80c02af3a16664ab8cd))
+
+### BREAKING CHANGES
+
+- bump node engine to >=22.0.0
+
 # [3.2.0](https://github.com/oclif/plugin-warn-if-update-available/compare/3.1.73...3.2.0) (2026-08-24)
 
 ### Features
