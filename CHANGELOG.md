@@ -1,3 +1,9 @@
+## [4.0.2](https://github.com/oclif/plugin-warn-if-update-available/compare/4.0.1...4.0.2) (2026-10-09)
+
+### Bug Fixes
+
+- **deps:** bump source-map-js from 1.2.1 to 1.2.2 ([#1071](https://github.com/oclif/plugin-warn-if-update-available/issues/1071)) ([cfb0c5d](https://github.com/oclif/plugin-warn-if-update-available/commit/cfb0c5dc157b0399d5b5382a3e50af164d54ee6a))
+
 ## [4.0.1](https://github.com/oclif/plugin-warn-if-update-available/compare/4.0.0...4.0.1) (2026-09-25)
 
 ### Bug Fixes
