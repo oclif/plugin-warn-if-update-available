@@ -1,3 +1,9 @@
+## [4.0.5](https://github.com/oclif/plugin-warn-if-update-available/compare/4.0.4...4.0.5) (2026-10-23)
+
+### Bug Fixes
+
+- remove http-call dependency @W-19586641@ ([6a5a9a6](https://github.com/oclif/plugin-warn-if-update-available/commit/6a5a9a662d21ad63bff99ed6885f6915d10902f7))
+
 ## [4.0.4](https://github.com/oclif/plugin-warn-if-update-available/compare/4.0.3...4.0.4) (2026-10-18)
 
 ### Bug Fixes
